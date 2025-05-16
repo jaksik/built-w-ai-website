@@ -1,12 +1,7 @@
-import { ModeToggle } from "@/components/ModeToggle"
-
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
-      {/* Your page content here */}
-      <ModeToggle/>
-      
-      <h1>Welcome to Built with AI</h1>
+      <h1>Welcome to the Home Page</h1>
     </div>
   )
 }

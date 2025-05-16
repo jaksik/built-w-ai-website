@@ -1,12 +1,7 @@
-import { ModeToggle } from "@/components/ModeToggle"
-
-export default function Home() {
+export default function NewsPage() {
   return (
     <div>
-      {/* Your page content here */}
-      <ModeToggle/>
-      
-      <h1>News</h1>
+      <h1>Welcome to the news page</h1>
     </div>
   )
 }
