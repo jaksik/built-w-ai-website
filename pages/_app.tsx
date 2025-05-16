@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Link href="/resources">Start Here</Link>
                   <Link href="/tools">AI Tools</Link>
                   
-                  <Link href="/labs">Labs</Link>
+                  <Link href="/news">News</Link>
 
                   <div className="ml-6">
                     <ModeToggle />
