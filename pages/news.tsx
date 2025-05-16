@@ -3,8 +3,7 @@ import GetNews from "@/components/GetNews"
 
 export default function NewsPage() {
   return (
-    <div>
-      <h1>Welcome to the news page</h1>
+    <div className="space-y-8 pb-8 min-h-screen">
       <GetNews/>
     </div>
   )
