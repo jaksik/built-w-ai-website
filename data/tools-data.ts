@@ -6,90 +6,56 @@ export interface Tool {
   description: string
 }
 
-export const categorySubcategories: Record<string, string[]> = {
-  "Agent Builders": [
-    "Workflow Automation",
-    "Cloud Agents"
-  ],
-  "Chat Assistants": [
-    "General Purpose",
-    "Specialized",
-    "Enterprise"
-  ],
-  "Business Tools": [
-    "Analytics",
-    "Hiring/Training",
-    "Management"
-  ],
-  "Cloud Platforms": [
-    "Hosting",
-    "Development",
-    "Storage",
-    "Databases"
-  ],
-  "Coding Agents": [
-    "Code Generation",
-    "Code Review",
-    "Development Tools",
-    "IDE Integration"
-  ],
-  "Sales": [
-    "Marketing",
-    "Engagement",
-    "Analysis"
-  ],
-  "Video Generators": [
-    "Avatar-based",
-    "Video Editing",
-    "Text-to-Video"
-  ],
-  "Voice Generators": [
-    "Text-to-Speech",
-    "Voice Cloning",
-    "Audio Processing",
-    "Multilingual"
-  ],
-  "Website Builders": [
-    "E-commerce",
-    "Website Generators"
-  ]
-}
 
 export const tools: Tool[] = [
   {
     name: "n8n",
-    category: "Agent Builders",
+    category: "Automation",
     subcategory: "Workflow Automation",
     url: "https://n8n.io/",
     description: "Low/No-code workflow automation platform."
   },
   {
     name: "Make",
-    category: "Agent Builders",
+    category: "Automation",
     subcategory: "Workflow Automation",
     url: "https://www.make.com/en/register?pc=sharpstartup",
     description: "Visual platform for connecting apps and automating workflows."
   },
   {
     name: "Zapier",
-    category: "Agent Builders",
+    category: "Automation",
     subcategory: "Workflow Automation",
     url: "https://zapier.com/",
     description: "Automate tasks between different web apps."
   },
   {
     name: "MindStudio",
-    category: "Agent Builders",
+    category: "Automation",
     subcategory: "Workflow Automation",
     url: "https://www.mindstudio.ai/",
     description: "Build AI agents with no-code."
   },
   {
     name: "RelevanceAI",
-    category: "Agent Builders",
+    category: "Automation",
     subcategory: "Workflow Automation",
     url: "https://relevanceai.com/",
     description: "Platform for building and deploying AI applications."
+  },
+  {
+    name: "Gemini",
+    category: "Chat Assistants",
+    subcategory: "General Purpose",
+    url: "https://gemini.google.com/",
+    description: "Google's multimodal AI model."
+  },
+  {
+    name: "Grok",
+    category: "Chat Assistants",
+    subcategory: "General Purpose",
+    url: "https://gemini.google.com/",
+    description: "Google's multimodal AI model."
   },
   {
     name: "Gemini",
@@ -106,18 +72,11 @@ export const tools: Tool[] = [
     description: "Advanced AI chatbot developed by OpenAI."
   },
   {
-    name: "Perplexity",
+    name: "Anthropic",
     category: "Chat Assistants",
     subcategory: "Specialized",
     url: "https://www.perplexity.ai/",
     description: "AI-powered answer engine."
-  },
-  {
-    name: "Exploding Topics",
-    category: "Business Tools",
-    subcategory: "Analytics",
-    url: "https://explodingtopics.com/?via=sharpstartup",
-    description: "Tool for discovering emerging trends."
   },
   {
     name: "Fiver",
@@ -134,13 +93,6 @@ export const tools: Tool[] = [
     description: "Accounting software for small business Toolses."
   },
   {
-    name: "ZenBusiness Tools",
-    category: "Business Tools",
-    subcategory: "Management",
-    url: "https://www.zenbusiness Tools.com/",
-    description: "Online business Tools formation services."
-  },
-  {
     name: "LegalZoom",
     category: "Business Tools",
     subcategory: "Management",
@@ -149,56 +101,56 @@ export const tools: Tool[] = [
   },
   {
     name: "BrowseAI",
-    category: "Business Tools",
+    category: "Automation",
     subcategory: "Analytics",
     url: "https://browse.ai/?via=sharpstartup",
     description: "Extract and monitor data from any website."
   },
   {
     name: "ChatNode",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://www.chatnode.ai/?via=sharpstartup",
     description: "Platform for creating AI chatbots."
   },
   {
     name: "ChatBase",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://www.chatbase.co/?via=Sharpstartup",
     description: "Build AI chatbots from your data."
   },
   {
     name: "HubSpot",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://www.hubspot.com/products/crm/chatbot-builder",
     description: "Chatbot builder within HubSpot's CRM platform."
   },
   {
     name: "DropChat",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://dropchat.co/?via=sharpstartup",
     description: "Provides AI chatbot solutions for business Toolses."
   },
   {
     name: "ChatbotBuilder",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://www.chatbotbuilder.ai/",
     description: "Tool for creating chatbots for various use cases."
   },
   {
     name: "Intercom",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://www.intercom.com/",
     description: "Offers customer communication solutions with AI chatbots."
   },
   {
     name: "Botpress",
-    category: "Chatbot Builders",
+    category: "Custom Chatbots",
     subcategory: "Custom Solutions",
     url: "https://botpress.com/",
     description: "Open-source platform for building AI-powered chatbots."
@@ -217,6 +169,27 @@ export const tools: Tool[] = [
     url: "https://cloud.google.com/",
     description: "Cloud tools for building and deploying applications."
   },
+   {
+    name: "Azure",
+    category: "Cloud Platforms",
+    subcategory: "Development",
+    url: "https://cloud.google.com/",
+    description: "Cloud tools for building and deploying applications."
+  },
+   {
+    name: "Groq",
+    category: "Cloud Platforms",
+    subcategory: "Development",
+    url: "https://cloud.google.com/",
+    description: "Cloud tools for building and deploying applications."
+  },
+   {
+    name: "AWS",
+    category: "Cloud Platforms",
+    subcategory: "Development",
+    url: "https://cloud.google.com/",
+    description: "Cloud tools for building and deploying applications."
+  },
   {
     name: "Airtable",
     category: "Cloud Platforms",
@@ -226,6 +199,13 @@ export const tools: Tool[] = [
   },
   {
     name: "Windsurf",
+    category: "Coding Agents",
+    subcategory: "Development Tools",
+    url: "https://windsurf.com/",
+    description: "Provides tools for developers to build and manage APIs."
+  },
+    {
+    name: "Copilot",
     category: "Coding Agents",
     subcategory: "Development Tools",
     url: "https://windsurf.com/",
@@ -267,50 +247,29 @@ export const tools: Tool[] = [
     description: "AI tool for coaching and training."
   },
   {
-    name: "GoHighLevel",
-    category: "Sales",
-    subcategory: "Marketing",
-    url: "https://www.gohighlevel.com/?fp_ref=connor96",
-    description: "All-in-one marketing and sales platform."
-  },
-  {
-    name: "LemonSqueezy",
-    category: "Sales",
-    subcategory: "Marketing",
-    url: "https://www.lemonsqueezy.com/",
-    description: "Payment platform for selling digital products."
-  },
-  {
-    name: "Hubspot",
-    category: "Sales",
-    subcategory: "Marketing",
-    url: "https://www.hubspot.com/",
-    description: "CRM platform for marketing and sales."
-  },
-  {
     name: "Bland",
-    category: "Sales",
+    category: "Sales/Marketing",
     subcategory: "Engagement",
     url: "https://www.bland.ai/",
     description: "AI tool for sales prospecting."
   },
   {
     name: "Outreach",
-    category: "Sales",
+    category: "Sales/Marketing",
     subcategory: "Engagement",
     url: "https://www.outreach.io/",
     description: "Sales engagement platform."
   },
   {
     name: "SecondNature",
-    category: "Sales",
+    category: "Sales/Marketing",
     subcategory: "Analysis",
     url: "https://secondnature.ai/",
     description: "AI simulation for sales conversations."
   },
   {
     name: "Quantified",
-    category: "Sales",
+    category: "Sales/Marketing",
     subcategory: "Analysis",
     url: "https://quantified.ai/",
     description: "AI platform for communication analysis."
@@ -345,21 +304,21 @@ export const tools: Tool[] = [
   },
   {
     name: "Descript",
-    category: "Video/Podcast Editing",
+    category: "Video Generators",
     subcategory: "Editing",
     url: "https://get.descript.com/sharpstartup",
     description: "Collaborative audio/video editor powered by AI."
   },
   {
     name: "Podcastle",
-    category: "Video/Podcast Editing",
+    category: "Voice Generators",
     subcategory: "Editing",
     url: "https://podcastle.ai/?ref=oda0mdr",
     description: "AI-powered podcast recording and editing platform."
   },
   {
     name: "OpusPro",
-    category: "Video/Podcast Editing",
+    category: "Video Generators",
     subcategory: "Editing",
     url: "https://www.opus.pro/",
     description: "AI tool for repurposing long-form videos into clips."
@@ -394,7 +353,7 @@ export const tools: Tool[] = [
   },
   {
     name: "JustCall",
-    category: "Voice Generators",
+    category: "Business Tools",
     subcategory: "Cloud Phone",
     url: "https://justcall.io/",
     description: "Cloud phone system with AI features."

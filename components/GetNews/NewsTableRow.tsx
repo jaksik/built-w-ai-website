@@ -40,7 +40,7 @@ export const NewsTableRow = ({ article, onToggleActive }: NewsTableRowProps) => 
                     href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-md font-medium text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors"
+                    className="text-sm font-medium text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors"
                 >
                     {truncateText(article.title)}
                 </a>

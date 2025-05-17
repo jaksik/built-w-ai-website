@@ -6,7 +6,8 @@ export const NewsHeader = () => (
       AI News Directory
     </h1>
     <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-      Stay up to date with the latest AI news and developments from trusted sources.
+      Understand the AI landscape through our curated list of articles in 4 key AI categories.
+      <br />
     </p>
   </section>
 );
