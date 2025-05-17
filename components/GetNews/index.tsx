@@ -4,7 +4,6 @@ import { NewsHeader } from './NewsHeader';
 import { NewsTable } from './NewsTable';
 import { NewsTableSkeleton } from './NewsTableSkeleton';
 
-
 const GetNews: React.FC = () => {
   const [news, setNews] = useState<INews[]>([]);
   const [isLoading, setIsLoading] = useState(true);
