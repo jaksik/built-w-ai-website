@@ -2,11 +2,18 @@ import "@/styles/globals.css"
 import Link from "next/link"
 import type { AppProps } from "next/app"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/ThemeProvider"
-import { ModeToggle } from "@/components/ModeToggle"
-import { MobileNav } from "@/components/MobileNav"
+import { ThemeProvider } from "@/components/Layout/ThemeProvider"
+import { ModeToggle } from "@/components/Layout/ModeToggle"
+import { MobileNav } from "@/components/Layout/MobileNav"
 
 const inter = Inter({ subsets: ["latin"] })
+
+const navigationLinks = [
+  { href: "/tools", label: "AI Tools" },
+  { href: "/news", label: "News" },
+  { href: "/glossary", label: "Glossary" },
+  { href: "/labs", label: "Labs" },
+]
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -22,10 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
                   </Link>
                 </div>
                 <nav className="text-base font-medium space-x-6 hidden md:flex items-center">
-                <Link href="/resources">Start Here</Link>
-                  <Link href="/tools">AI Tools</Link>
-                  
-                  <Link href="/news">News</Link>
+
+                  {navigationLinks.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
 
                   <div className="ml-6">
                     <ModeToggle />
