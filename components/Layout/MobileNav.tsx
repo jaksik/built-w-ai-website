@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { ModeToggle } from "@/components/ModeToggle"
+import { ModeToggle } from "@/components/Layout/ModeToggle"
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)

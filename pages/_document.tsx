@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" suppressHydrationWarning>
       <Head />
+      {/* <link rel="icon" href="/favicon.png" /> */}
       <body>
         <Main />
         <NextScript />

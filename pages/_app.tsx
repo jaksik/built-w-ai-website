@@ -2,13 +2,40 @@ import "@/styles/globals.css"
 import Link from "next/link"
 import type { AppProps } from "next/app"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/ThemeProvider"
-import { ModeToggle } from "@/components/ModeToggle"
-import { MobileNav } from "@/components/MobileNav"
+import { ThemeProvider } from "@/components/Layout/ThemeProvider"
+import { ModeToggle } from "@/components/Layout/ModeToggle"
+import { LogoToggle } from "@/components/Layout/LogoToggle"
+
+import { MobileNav } from "@/components/Layout/MobileNav"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
+const navigationLinks = [
+  { href: "/tools", label: "AI Tools" },
+  { href: "/news", label: "News" },
+  { href: "/glossary", label: "Glossary" },
+  { href: "/labs", label: "Labs" },
+]
+
 export default function App({ Component, pageProps }: AppProps) {
+  const { resolvedTheme, theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+    console.log('Theme state:', {
+      resolvedTheme,
+      theme,
+      mounted
+    })
+  }, [resolvedTheme, theme, mounted])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
       <div className={inter.className}>
@@ -16,16 +43,14 @@ export default function App({ Component, pageProps }: AppProps) {
           <div className="max-w-4xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
             <header className="mb-8">
               <div className="flex items-center justify-between">
-                <div className="flex-shrink-0">
-                  <Link href="/" className="text-2xl font-bold">
-                    Built with AI
-                  </Link>
-                </div>
+                <LogoToggle/>
                 <nav className="text-base font-medium space-x-6 hidden md:flex items-center">
-                <Link href="/resources">Start Here</Link>
-                  <Link href="/tools">AI Tools</Link>
-                  
-                  <Link href="/news">News</Link>
+
+                  {navigationLinks.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
 
                   <div className="ml-6">
                     <ModeToggle />

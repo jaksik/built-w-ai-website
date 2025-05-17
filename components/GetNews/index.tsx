@@ -3,11 +3,26 @@ import { INews } from '@/models/News';
 import { NewsHeader } from './NewsHeader';
 import { NewsTable } from './NewsTable';
 import { NewsTableSkeleton } from './NewsTableSkeleton';
+import { getCategoryColorClasses } from './CategoryColorClasses';
+
+const categories = [
+  "All",
+  "Macro Shifts",
+  "AI Agents",
+  "Startups",
+  "Research",
+  "Other"
+];
 
 const GetNews: React.FC = () => {
   const [news, setNews] = useState<INews[]>([]);
+  const [activeFilter, setActiveFilter] = useState("All");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
+
+  const filteredNews = activeFilter === "All"
+    ? news
+    : news.filter(article => article.category === activeFilter);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -46,8 +61,8 @@ const GetNews: React.FC = () => {
         throw new Error(error.message || 'Failed to update news article');
       }
 
-      setNews(news.map(article => 
-        article._id.toString() === id 
+      setNews(news.map(article =>
+        article._id.toString() === id
           ? { ...article, active: !currentActive }
           : article
       ));
@@ -57,7 +72,7 @@ const GetNews: React.FC = () => {
     }
   };
 
-   if (isLoading) {
+  if (isLoading) {
     return (
       <div className="space-y-8 pb-8">
         <NewsHeader />
@@ -82,7 +97,25 @@ const GetNews: React.FC = () => {
     <div className="space-y-8 pb-8 min-h-screen">
       <NewsHeader />
       <div className="max-w-[1200px] mx-auto px-4">
-        <NewsTable news={news} onToggleActive={handleToggleActive} />
+        <div className="mb-6 flex gap-2 flex-wrap justify-center">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+            ${category === activeFilter ? 'ring-2 ring-offset-2 ' : ''}
+            ${category === "All"
+                  ? activeFilter === category
+                    ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 ring-gray-900 dark:ring-gray-100"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                  : getCategoryColorClasses(category)
+                }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <NewsTable news={filteredNews} onToggleActive={handleToggleActive} />
       </div>
     </div>
   );
