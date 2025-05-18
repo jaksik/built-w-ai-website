@@ -20,18 +20,18 @@ const glossaryItems = [
 
 export function Labs() {
     return (
+<div>
+        {/* // <div className="space-y-8 pb-8">
+        //     <section className="text-center space-y-6 py-8">
+        //         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+        //             AI Labs
+        //         </h1>
+        //         <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
+        //             Discover and compare the most powerful AI tools available today. Filter by category to find exactly what you need.
+        //         </p>
 
-        <div className="space-y-8 pb-8">
-            <section className="text-center space-y-6 py-8">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                    Labs
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                    Discover and compare the most powerful AI tools available today. Filter by category to find exactly what you need.
-                </p>
 
-
-            </section>
+        //     </section> */}
 
             <div className="grid gap-8">
                 <div className="grid gap-6">

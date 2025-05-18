@@ -32,6 +32,11 @@ const GetNews: React.FC = () => {
           throw new Error('Failed to fetch news');
         }
         const { data } = await response.json();
+        // Create a promise that resolves after 2 seconds
+        const minLoadingTime = new Promise(resolve => setTimeout(resolve, 1500));
+
+        // Wait for both the data and the minimum time
+        await Promise.all([minLoadingTime]);
         setNews(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
@@ -74,11 +79,8 @@ const GetNews: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="space-y-8 pb-8">
-        <NewsHeader />
-        <div className="max-w-[1200px] mx-auto px-4">
-          <NewsTableSkeleton />
-        </div>
+      <div className="max-w-[1200px] mx-auto px-4">
+        <NewsTableSkeleton />
       </div>
     );
   }
@@ -94,8 +96,7 @@ const GetNews: React.FC = () => {
   }
 
   return (
-    <div className="space-y-8 pb-8 min-h-screen">
-      <NewsHeader />
+    <div>
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="mb-6 flex gap-2 flex-wrap justify-center">
           {categories.map((category) => (
@@ -103,10 +104,10 @@ const GetNews: React.FC = () => {
               key={category}
               onClick={() => setActiveFilter(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all
-            ${category === activeFilter ? 'ring-2 ring-offset-2 ' : ''}
-            ${category === "All"
+              ${category === activeFilter ? 'ring-2 ring-offset-2 ' : ''}
+              ${category === "All"
                   ? activeFilter === category
-                    ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 ring-gray-900 dark:ring-gray-100"
+                    ? "bg-white text-gray-900 ring-gray-400 dark:bg-gray-900 dark:text-white dark:ring-gray-900"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
                   : getCategoryColorClasses(category)
                 }`}
