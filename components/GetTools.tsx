@@ -121,7 +121,7 @@ export default function Tools() {
                                         <svg
                                             className="w-5 h-5 text-blue-600 dark:text-sky-400 flex-shrink-0"
                                             fill="none"
-                                            stroke="black"
+                                            stroke="currentColor"
                                             viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
