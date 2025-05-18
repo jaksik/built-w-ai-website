@@ -1,0 +1,76 @@
+[
+  {
+    "id": "spam-detector-challenge",
+    "name": "The Spam Detector Challenge",
+    "category": "Machine Learning & Foundational Concepts",
+    "idea": "Explore how a basic spam filter works by identifying features and outlining a simple classification algorithm.",
+    "activity": [
+      "Collect a small dataset of 'spam' and 'not spam' (ham) email subject lines or short messages.",
+      "Manually identify keywords or features that often appear in spam (e.g., 'free,' 'money,' '!!!', all caps).",
+      "Outline the steps a simple algorithm might take to classify a new message based on these features (e.g., a points system).",
+      "Discuss: How would this system learn and improve? What are its limitations?"
+    ],
+    "linkToGlossary": ["machine-learning", "supervised-learning"],
+    "whatYoullLearn": "Understand the basic principles of text classification and how machine learning models can learn from data to make predictions."
+  },
+  {
+    "id": "smart-toaster-design",
+    "name": "Smart Toaster Design Challenge",
+    "category": "Edge AI & IoT",
+    "idea": "Brainstorm how to make a common appliance 'smarter' using Edge AI, considering sensors, local decision-making, and benefits.",
+    "activity": [
+      "Identify problems with current toasters (e.g., inconsistent browning, forgetting settings).",
+      "Brainstorm sensors a 'smart toaster' could have (e.g., camera for bread color, moisture sensor).",
+      "Define what decisions the Edge AI would make locally (e.g., adjust toasting time based on visual input).",
+      "Discuss why running this AI on the edge would be beneficial (privacy, speed, no internet needed)."
+    ],
+    "linkToGlossary": ["edge-ai", "tinyml", "iot", "sensors"],
+    "whatYoullLearn": "How Edge AI and IoT concepts can be applied to everyday objects to enhance functionality and user experience, focusing on local processing benefits."
+  },
+  {
+    "id": "ai-copilot-workflow",
+    "name": "The AI Co-Pilot: Supercharging Your Workflow",
+    "category": "Generative AI, Productivity & Business Acceleration",
+    "idea": "Explore how AI assistants can dramatically speed up common work tasks, leading to rapid productivity gains.",
+    "activity": [
+      "Select 2-3 common tasks (e.g., drafting emails, summarizing articles, brainstorming slogans).",
+      "Estimate manual effort for these tasks.",
+      "Formulate effective prompts for an AI assistant to perform these tasks.",
+      "Estimate time for reviewing and refining AI output.",
+      "Compare manual vs. AI-assisted effort and analyze productivity gains.",
+      "Discuss crucial skills for using AI assistants and potential limitations."
+    ],
+    "linkToGlossary": ["generative-ai", "large-language-models", "nlp", "automation"],
+    "whatYoullLearn": "How AI tools can be leveraged as powerful co-pilots to significantly reduce time and effort on various tasks, the importance of human-AI collaboration, and the skill of effective prompting."
+  },
+  {
+    "id": "strategic-ai-amplifier",
+    "name": "The Strategic AI Amplifier - Reclaiming Time for Revolutionary Growth",
+    "category": "Generative AI, Productivity & Business Acceleration",
+    "idea": "Design a conceptual framework for an AI Virtual Assistant (AIVA) that frees up cognitive bandwidth for high-level strategic business growth.",
+    "activity": [
+      "Identify 'High-Leverage' Time Sinks: Brainstorm complex, time-consuming tasks beyond simple admin.",
+      "Envision 'Strategic AIVA' Capabilities: Describe how an advanced AIVA could handle 80-90% of these tasks.",
+      "Calculate Your 'Strategic Dividend': Estimate the total time your AIVA could free up.",
+      "Design Your 'Strategic Reinvestment Portfolio': Identify 3-5 high-impact, strategic business growth activities for this reclaimed time.",
+      "Orchestrate Your AIVA: Consider how to 'brief' or 'program' your AIVA to understand and support your strategic goals."
+    ],
+    "linkToGlossary": ["generative-ai", "large-language-models", "automation", "human-ai-collaboration", "strategic-ai"],
+    "whatYoullLearn": "How to conceptualize an AI assistant as a strategic force multiplier, enabling a shift from operational burdens to high-impact growth activities, and how to align AI interactions with core business strategies."
+  },
+  {
+    "id": "algorithmic-bias-detective",
+    "name": "The Algorithmic Bias Detective",
+    "category": "AI Ethics & Explainable AI",
+    "idea": "Explore how bias can creep into AI systems and discuss strategies to detect and mitigate it.",
+    "activity": [
+      "Imagine an AI for loan applications trained on historical data.",
+      "Discuss how past societal biases in data might be learned and perpetuated by the AI.",
+      "Identify data features that could inadvertently lead to bias (e.g., zip code as a proxy for race).",
+      "Brainstorm strategies to detect and mitigate such biases in AI models."
+    ],
+    "linkToGlossary": ["ai-ethics", "explainable-ai", "algorithmic-bias"],
+    "whatYoullLearn": "The importance of recognizing and addressing algorithmic bias in AI systems to ensure fairness and prevent the perpetuation of societal inequalities."
+  }
+]
+

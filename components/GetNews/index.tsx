@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { INews } from '@/models/News';
-import { NewsHeader } from './NewsHeader';
 import { NewsTable } from './NewsTable';
 import { NewsTableSkeleton } from './NewsTableSkeleton';
 import { getCategoryColorClasses } from './CategoryColorClasses';
