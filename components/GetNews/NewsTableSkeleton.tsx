@@ -14,7 +14,7 @@ export const NewsTableSkeleton = () => (
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-          {[...Array(3)].map((_, i) => (
+          {[...Array(8)].map((_, i) => (
             <tr key={i}>
               <td className="w-2/12 px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                 <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-20"></div>

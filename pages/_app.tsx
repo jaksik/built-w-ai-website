@@ -4,22 +4,24 @@ import type { AppProps } from "next/app"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/Layout/ThemeProvider"
 import { ModeToggle } from "@/components/Layout/ModeToggle"
-import { LogoToggle } from "@/components/Layout/LogoToggle"
+// import { LogoToggle } from "@/components/Layout/LogoToggle"
 
 import { MobileNav } from "@/components/Layout/MobileNav"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 
 const inter = Inter({ subsets: ["latin"] })
 
 const navigationLinks = [
-  { href: "/tools", label: "AI Tools" },
+  { href: "/tools", label: "Tools" },
   { href: "/news", label: "News" },
   { href: "/glossary", label: "Glossary" },
   { href: "/labs", label: "Labs" },
 ]
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
   const { resolvedTheme, theme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -43,15 +45,31 @@ export default function App({ Component, pageProps }: AppProps) {
           <div className="max-w-4xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
             <header className="mb-8">
               <div className="flex items-center justify-between">
-                <LogoToggle/>
-                <nav className="text-base font-medium space-x-6 hidden md:flex items-center">
 
+                <Link href="/" className="flex items-baseline logo-font">
+                  <span className="text-3xl font-bold">Built</span>
+                  <span className="text-2xl font-semibold mx-2">with</span>
+                  <span className="text-3xl font-bold">AI</span>
+                </Link>
+
+                <nav className="text-base font-medium space-x-6 hidden md:flex items-center">
                   {navigationLinks.map((link) => (
-                    <Link key={link.href} href={link.href}>
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`
+                        text-gray-600 dark:text-gray-300
+                        hover:text-gray-800 dark:hover:text-gray-100 
+                        transition-colors
+                        ${router.pathname === link.href
+                          ? "underline decoration-2 underline-offset-8 decoration-gray-600 dark:decoration-gray-300"
+                          : ""
+                        }
+                      `}
+                    >
                       {link.label}
                     </Link>
                   ))}
-
                   <div className="ml-6">
                     <ModeToggle />
                   </div>

@@ -1,4 +1,5 @@
 export interface Tool {
+  id: string
   name: string
   category: string
   subcategory: string
@@ -9,6 +10,7 @@ export interface Tool {
 
 export const tools: Tool[] = [
   {
+    id: "1",
     name: "n8n",
     category: "Automation",
     subcategory: "Workflow Automation",
@@ -16,6 +18,7 @@ export const tools: Tool[] = [
     description: "Low/No-code workflow automation platform."
   },
   {
+    id: "2",
     name: "Make",
     category: "Automation",
     subcategory: "Workflow Automation",
@@ -23,6 +26,7 @@ export const tools: Tool[] = [
     description: "Visual platform for connecting apps and automating workflows."
   },
   {
+    id: "3",
     name: "Zapier",
     category: "Automation",
     subcategory: "Workflow Automation",
@@ -30,6 +34,7 @@ export const tools: Tool[] = [
     description: "Automate tasks between different web apps."
   },
   {
+    id: "4",
     name: "MindStudio",
     category: "Automation",
     subcategory: "Workflow Automation",
@@ -37,6 +42,7 @@ export const tools: Tool[] = [
     description: "Build AI agents with no-code."
   },
   {
+    id: "5",
     name: "RelevanceAI",
     category: "Automation",
     subcategory: "Workflow Automation",
@@ -44,6 +50,7 @@ export const tools: Tool[] = [
     description: "Platform for building and deploying AI applications."
   },
   {
+    id: "6",
     name: "Gemini",
     category: "Chat Assistants",
     subcategory: "General Purpose",
@@ -51,6 +58,7 @@ export const tools: Tool[] = [
     description: "Google's multimodal AI model."
   },
   {
+    id: "7",
     name: "Grok",
     category: "Chat Assistants",
     subcategory: "General Purpose",
@@ -58,6 +66,7 @@ export const tools: Tool[] = [
     description: "Google's multimodal AI model."
   },
   {
+    id: "8",
     name: "Gemini",
     category: "Chat Assistants",
     subcategory: "General Purpose",
@@ -65,6 +74,7 @@ export const tools: Tool[] = [
     description: "Google's multimodal AI model."
   },
   {
+    id: "9",
     name: "ChatGPT",
     category: "Chat Assistants",
     subcategory: "General Purpose",
@@ -72,6 +82,7 @@ export const tools: Tool[] = [
     description: "Advanced AI chatbot developed by OpenAI."
   },
   {
+    id: "10",
     name: "Anthropic",
     category: "Chat Assistants",
     subcategory: "Specialized",
@@ -79,6 +90,7 @@ export const tools: Tool[] = [
     description: "AI-powered answer engine."
   },
   {
+    id: "11",
     name: "Fiver",
     category: "Business Tools",
     subcategory: "Hiring/Training",
@@ -86,6 +98,7 @@ export const tools: Tool[] = [
     description: "Platform to hire freelancers."
   },
   {
+    id: "12",
     name: "QuickBooks",
     category: "Business Tools",
     subcategory: "Management",
@@ -93,6 +106,7 @@ export const tools: Tool[] = [
     description: "Accounting software for small business Toolses."
   },
   {
+    id: "13",
     name: "LegalZoom",
     category: "Business Tools",
     subcategory: "Management",
@@ -100,6 +114,7 @@ export const tools: Tool[] = [
     description: "Online legal services platform."
   },
   {
+    id: "14",
     name: "BrowseAI",
     category: "Automation",
     subcategory: "Analytics",
@@ -107,6 +122,7 @@ export const tools: Tool[] = [
     description: "Extract and monitor data from any website."
   },
   {
+    id: "15",
     name: "ChatNode",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -114,6 +130,7 @@ export const tools: Tool[] = [
     description: "Platform for creating AI chatbots."
   },
   {
+    id: "16",
     name: "ChatBase",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -121,6 +138,7 @@ export const tools: Tool[] = [
     description: "Build AI chatbots from your data."
   },
   {
+    id: "17",
     name: "HubSpot",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -128,6 +146,7 @@ export const tools: Tool[] = [
     description: "Chatbot builder within HubSpot's CRM platform."
   },
   {
+    id: "18",
     name: "DropChat",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -135,6 +154,7 @@ export const tools: Tool[] = [
     description: "Provides AI chatbot solutions for business Toolses."
   },
   {
+    id: "19",
     name: "ChatbotBuilder",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -142,6 +162,7 @@ export const tools: Tool[] = [
     description: "Tool for creating chatbots for various use cases."
   },
   {
+    id: "20",
     name: "Intercom",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -149,6 +170,7 @@ export const tools: Tool[] = [
     description: "Offers customer communication solutions with AI chatbots."
   },
   {
+    id: "21",
     name: "Botpress",
     category: "Custom Chatbots",
     subcategory: "Custom Solutions",
@@ -156,6 +178,7 @@ export const tools: Tool[] = [
     description: "Open-source platform for building AI-powered chatbots."
   },
   {
+    id: "22",
     name: "Cloudways",
     category: "Cloud Platforms",
     subcategory: "Hosting",
@@ -163,6 +186,7 @@ export const tools: Tool[] = [
     description: "Cloud hosting great for WordPress."
   },
   {
+    id: "23",
     name: "Google Cloud",
     category: "Cloud Platforms",
     subcategory: "Development",
@@ -170,6 +194,7 @@ export const tools: Tool[] = [
     description: "Cloud tools for building and deploying applications."
   },
    {
+    id: "24",
     name: "Azure",
     category: "Cloud Platforms",
     subcategory: "Development",
@@ -177,6 +202,7 @@ export const tools: Tool[] = [
     description: "Cloud tools for building and deploying applications."
   },
    {
+    id: "25",
     name: "Groq",
     category: "Cloud Platforms",
     subcategory: "Development",
@@ -184,6 +210,7 @@ export const tools: Tool[] = [
     description: "Cloud tools for building and deploying applications."
   },
    {
+    id: "26",
     name: "AWS",
     category: "Cloud Platforms",
     subcategory: "Development",
@@ -191,6 +218,7 @@ export const tools: Tool[] = [
     description: "Cloud tools for building and deploying applications."
   },
   {
+    id: "27",
     name: "Airtable",
     category: "Cloud Platforms",
     subcategory: "Storage",
@@ -198,6 +226,7 @@ export const tools: Tool[] = [
     description: "Collaborative spreadsheet-database tool."
   },
   {
+    id: "28",
     name: "Windsurf",
     category: "Coding Agents",
     subcategory: "Development Tools",
@@ -205,6 +234,7 @@ export const tools: Tool[] = [
     description: "Provides tools for developers to build and manage APIs."
   },
     {
+    id: "29",
     name: "Copilot",
     category: "Coding Agents",
     subcategory: "Development Tools",
@@ -212,6 +242,7 @@ export const tools: Tool[] = [
     description: "Provides tools for developers to build and manage APIs."
   },
   {
+    id: "30",
     name: "Cursur",
     category: "Coding Agents",
     subcategory: "IDE Integration",
@@ -219,6 +250,7 @@ export const tools: Tool[] = [
     description: "AI-powered code editor."
   },
   {
+    id: "31",
     name: "Lovable",
     category: "Coding Agents",
     subcategory: "Code Assistant",
@@ -226,6 +258,7 @@ export const tools: Tool[] = [
     description: "AI code assistant."
   },
   {
+    id: "32",
     name: "Replit",
     category: "Coding Agents",
     subcategory: "Development Tools",
@@ -233,6 +266,7 @@ export const tools: Tool[] = [
     description: "Online IDE and collaborative coding environment."
   },
   {
+    id: "33",
     name: "vidIQ",
     category: "Business Tools",
     subcategory: "Analytics",
@@ -240,6 +274,7 @@ export const tools: Tool[] = [
     description: "AI-powered YouTube growth and analytics."
   },
   {
+    id: "34",
     name: "CoachVox",
     category: "Business Tools",
     subcategory: "Hiring/Training",
@@ -247,6 +282,7 @@ export const tools: Tool[] = [
     description: "AI tool for coaching and training."
   },
   {
+    id: "35",
     name: "Bland",
     category: "Sales/Marketing",
     subcategory: "Engagement",
@@ -254,6 +290,7 @@ export const tools: Tool[] = [
     description: "AI tool for sales prospecting."
   },
   {
+    id: "36",
     name: "Outreach",
     category: "Sales/Marketing",
     subcategory: "Engagement",
@@ -261,6 +298,7 @@ export const tools: Tool[] = [
     description: "Sales engagement platform."
   },
   {
+    id: "37",
     name: "SecondNature",
     category: "Sales/Marketing",
     subcategory: "Analysis",
@@ -268,6 +306,7 @@ export const tools: Tool[] = [
     description: "AI simulation for sales conversations."
   },
   {
+    id: "38",
     name: "Quantified",
     category: "Sales/Marketing",
     subcategory: "Analysis",
@@ -275,6 +314,7 @@ export const tools: Tool[] = [
     description: "AI platform for communication analysis."
   },
   {
+    id: "39",
     name: "HeyGen",
     category: "Video Generators",
     subcategory: "Avatar-based",
@@ -282,6 +322,7 @@ export const tools: Tool[] = [
     description: "AI video generation platform using avatars."
   },
   {
+    id: "40",
     name: "Synthesia",
     category: "Video Generators",
     subcategory: "Avatar-based",
@@ -289,6 +330,7 @@ export const tools: Tool[] = [
     description: "AI video creation platform."
   },
   {
+    id: "41",
     name: "KlingAI",
     category: "Video Generators",
     subcategory: "Text-to-Video",
@@ -296,6 +338,7 @@ export const tools: Tool[] = [
     description: "AI video generation tool."
   },
   {
+    id: "42",
     name: "RunwayML",
     category: "Video Generators",
     subcategory: "Text-to-Video",
@@ -303,6 +346,7 @@ export const tools: Tool[] = [
     description: "Provides AI tools for video editing and creation."
   },
   {
+    id: "43",
     name: "Descript",
     category: "Video Generators",
     subcategory: "Editing",
@@ -310,6 +354,7 @@ export const tools: Tool[] = [
     description: "Collaborative audio/video editor powered by AI."
   },
   {
+    id: "44",
     name: "Podcastle",
     category: "Voice Generators",
     subcategory: "Editing",
@@ -317,6 +362,7 @@ export const tools: Tool[] = [
     description: "AI-powered podcast recording and editing platform."
   },
   {
+    id: "45",
     name: "OpusPro",
     category: "Video Generators",
     subcategory: "Editing",
@@ -324,6 +370,7 @@ export const tools: Tool[] = [
     description: "AI tool for repurposing long-form videos into clips."
   },
   {
+    id: "46",
     name: "Elevenlabs",
     category: "Voice Generators",
     subcategory: "Voice Cloning",
@@ -331,6 +378,7 @@ export const tools: Tool[] = [
     description: "AI voice cloning and text-to-speech platform."
   },
   {
+    id: "47",
     name: "Play.ht",
     category: "Voice Generators",
     subcategory: "Text-to-Speech",
@@ -338,6 +386,7 @@ export const tools: Tool[] = [
     description: "AI text-to-speech generator."
   },
   {
+    id: "48",
     name: "VoiceAI",
     category: "Voice Generators",
     subcategory: "Audio Processing",
@@ -345,6 +394,7 @@ export const tools: Tool[] = [
     description: "Provides AI voice changing software."
   },
   {
+    id: "49",
     name: "Vapi",
     category: "Voice Generators",
     subcategory: "Multilingual",
@@ -352,6 +402,7 @@ export const tools: Tool[] = [
     description: "AI voice API for building voice-enabled applications."
   },
   {
+    id: "50",
     name: "JustCall",
     category: "Business Tools",
     subcategory: "Cloud Phone",
@@ -359,6 +410,7 @@ export const tools: Tool[] = [
     description: "Cloud phone system with AI features."
   },
   {
+    id: "51",
     name: "Namecheap",
     category: "Website Builders",
     subcategory: "Domain Registration",
@@ -366,6 +418,7 @@ export const tools: Tool[] = [
     description: "Domain registar and hosting with free privacy protection."
   },
   {
+    id: "52",
     name: "10web",
     category: "Website Builders",
     subcategory: "Website Generators",
@@ -373,6 +426,7 @@ export const tools: Tool[] = [
     description: "AI-powered website builder and hosting for WordPress."
   },
   {
+    id: "53",
     name: "Shopify",
     category: "Website Builders",
     subcategory: "E-commerce",

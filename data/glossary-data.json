@@ -1,0 +1,132 @@
+        [
+            {
+                "id": "edge-ai",
+                "name": "Edge AI",
+                "category": "AI Architectures & Deployment",
+                "definition": "Edge AI, also known as AI at the edge, refers to the implementation of artificial intelligence (AI) algorithms and [Machine Learning](machine-learning) (ML) models directly on local hardware devices ('edge devices'). This contrasts with traditional cloud-based AI, where data is sent to centralized servers for processing. For example, a smart security camera processing video locally to detect intruders uses Edge AI.",
+                "analogy": "Think of it like having a mini-brain directly inside a device, allowing it to make smart decisions on its own without constantly needing to 'phone home' to a central supercomputer (the cloud).",
+                "significance": "Enables faster insights, reduced latency, enhanced data privacy, and offline functionality. Crucial for applications like [Autonomous Vehicles](autonomous-vehicles) and real-time industrial robotics. It makes AI more responsive and personal.",
+                "prompt": "How could Edge AI transform healthcare monitoring or make everyday appliances in your home more intelligent and efficient?",
+                "related": ["federated-learning", "tinyml", "iot", "autonomous-vehicles", "decentralized-ai"]
+            },
+            {
+                "id": "federated-learning",
+                "name": "Federated Learning",
+                "category": "Machine Learning Techniques",
+                "definition": "A [Machine Learning](machine-learning) technique where an AI model is trained across multiple decentralized edge devices or servers holding local data samples, without exchanging the raw data itself. A global model is improved by aggregating updates from local models. This is key for privacy and is often used with [Edge AI](edge-ai).",
+                "analogy": "Imagine a group of hospitals wanting to build a better diagnostic AI. Instead of sharing all their sensitive patient data, each hospital trains a copy of the AI model on its own data. They then send only the 'lessons learned' (model updates) to a central coordinator, who combines these lessons to create an improved global model, without ever seeing the private patient records.",
+                "significance": "Strongly complements [Edge AI](edge-ai) by enabling collaborative model training while preserving data privacy. Essential for industries dealing with sensitive data, like healthcare and finance. It's a form of [Privacy-Preserving AI](privacy-preserving-ai).",
+                "prompt": "What new collaborative AI applications become possible when data privacy can be maintained through Federated Learning?",
+                "related": ["edge-ai", "machine-learning", "privacy-preserving-ai", "decentralized-ai"]
+            },
+            {
+                "id": "tinyml",
+                "name": "TinyML",
+                "category": "AI Architectures & Deployment",
+                "definition": "A field of [Machine Learning](machine-learning) focused on developing and deploying AI models on very low-power, resource-constrained hardware, such as microcontrollers (MCUs). These models are optimized to be extremely small and computationally efficient, enabling AI on billions of small devices.",
+                "analogy": "Think of it as creating a highly skilled 'mini-brain' that can perform specific intelligent tasks (like keyword spotting or simple anomaly detection) using minimal energy, fitting into the smallest of devices, like a sensor in your smartwatch or a coffee machine.",
+                "significance": "A key enabler for many [Edge AI](edge-ai) applications, allowing AI capabilities to be embedded into virtually any object. This opens up vast possibilities for 'always-on' smart devices and widespread [IoT](iot) intelligence.",
+                "prompt": "What everyday objects could become 'smart' and more helpful if they had TinyML capabilities?",
+                "related": ["edge-ai", "machine-learning", "iot", "embedded-systems"]
+            },
+            {
+                "id": "machine-learning",
+                "name": "Machine Learning",
+                "category": "Foundational Concepts",
+                "definition": "A subfield of artificial intelligence where computer systems use algorithms and statistical models to perform tasks without explicit instructions, relying on patterns and inference instead. Systems learn from data to improve their performance over time. [Deep Learning](deep-learning) is a popular type of ML.",
+                "analogy": "It's like teaching a child by showing them many examples. You don't write down every single rule for recognizing a cat; you show them many pictures of cats, and they eventually learn to identify cats on their own.",
+                "significance": "The engine behind most modern AI applications, from recommendation systems and spam filters to medical diagnosis and [Autonomous Vehicles](autonomous-vehicles). It allows computers to tackle complex problems that are difficult to program explicitly.",
+                "prompt": "Think about a repetitive task you do. Could Machine Learning potentially automate or assist with it by learning from past examples?",
+                "related": ["deep-learning", "neural-networks", "supervised-learning", "unsupervised-learning", "artificial-intelligence"]
+            },
+            {
+                "id": "deep-learning",
+                "name": "Deep Learning",
+                "category": "Machine Learning Techniques",
+                "definition": "A specialized subset of [Machine Learning](machine-learning) that uses artificial [Neural Networks](neural-networks) with multiple layers (hence 'deep') to analyze various factors of data. It excels at tasks like image recognition, natural language processing, and speech recognition.",
+                "analogy": "If Machine Learning is like teaching a child, Deep Learning is like how a child's brain, with its many interconnected neurons, learns to recognize complex patterns by processing information through different layers of abstraction.",
+                "significance": "Powers many of the most advanced AI breakthroughs, including sophisticated [Generative AI](generative-ai) models, advanced image understanding, and human-like language translation.",
+                "prompt": "Deep Learning has enabled computers to 'see' and 'hear' with remarkable accuracy. What new possibilities does this unlock for human-computer interaction or accessibility?",
+                "related": ["machine-learning", "neural-networks", "generative-ai", "computer-vision", "nlp"]
+            },
+            {
+                "id": "neural-networks",
+                "name": "Neural Networks",
+                "category": "Machine Learning Techniques",
+                "definition": "Computing systems vaguely inspired by the biological neural networks that constitute animal brains. They consist of interconnected nodes or 'neurons' organized in layers. Each connection can transmit a signal from one neuron to another, and the connections have weights that are adjusted during the learning process. Core to [Deep Learning](deep-learning).",
+                "analogy": "Imagine a complex network of light switches (neurons) connected by wires (connections). The way these switches are wired and how sensitive they are to being flipped (weights) determines the overall pattern of lights that turn on for a given input. The network learns by adjusting these sensitivities.",
+                "significance": "The foundational architecture for most [Deep Learning](deep-learning) models, enabling them to learn complex patterns and representations from data.",
+                "prompt": "Neural networks learn by adjusting connections. How does this mimic aspects of biological learning, and what are the limitations of this analogy?",
+                "related": ["deep-learning", "machine-learning", "artificial-intelligence"]
+            },
+            {
+                "id": "generative-ai",
+                "name": "Generative AI",
+                "category": "AI Applications & Fields",
+                "definition": "A class of AI models that can create new, original content, such as text, images, audio, video, or code, rather than just analyzing or acting on existing data. Examples include models like GPT for text or DALL-E for images. Often built using [Deep Learning](deep-learning) techniques.",
+                "analogy": "Think of it as an AI artist, writer, or composer. You give it a prompt or some input, and it generates a brand new piece of art, a story, or a musical composition that didn't exist before.",
+                "significance": "Revolutionizing content creation, design, and even scientific discovery. It has the potential to augment human creativity and automate many creative tasks. There's ongoing research to make these models runnable via [Edge AI](edge-ai).",
+                "prompt": "If you had access to an AI that could generate any kind of content you imagine, what would you create first and why?",
+                "related": ["deep-learning", "nlp", "computer-vision", "large-language-models"]
+            },
+            {
+                "id": "explainable-ai",
+                "name": "Explainable AI (XAI)",
+                "category": "Ethical & Societal Aspects",
+                "definition": "A set of methods and techniques in artificial intelligence that allows human users to understand and trust the results and output created by AI algorithms. XAI aims to make AI decisions less of a 'black box,' especially for complex models like those used in [Deep Learning](deep-learning).",
+                "analogy": "Imagine an AI doctor that not only gives a diagnosis but also clearly explains the symptoms and test results that led to that conclusion, just like a human doctor would.",
+                "significance": "Crucial for building trust, ensuring fairness, accountability, and debugging AI systems, especially in critical applications like healthcare, finance, and autonomous systems. Essential for responsible AI development.",
+                "prompt": "In what situations would it be absolutely critical for you to understand *why* an AI made a particular decision affecting you?",
+                "related": ["ai-ethics", "responsible-ai", "machine-learning", "deep-learning"]
+            },
+            {
+                "id": "iot",
+                "name": "Internet of Things (IoT)",
+                "category": "Related Technologies",
+                "definition": "A network of physical objects ('things') that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet. Many [Edge AI](edge-ai) and [TinyML](tinyml) applications are deployed on IoT devices.",
+                "analogy": "Think of it as connecting everyday objects – like your thermostat, fridge, car, or even a city's traffic lights – to the internet, allowing them to send and receive information and act intelligently.",
+                "significance": "Creates a vast network of data-generating devices, providing rich inputs for AI systems and enabling smart automation across various domains, from smart homes to smart cities and industries.",
+                "prompt": "How could connecting more devices in your environment to the internet, combined with AI, improve your daily life or efficiency?",
+                "related": ["edge-ai", "tinyml", "big-data", "sensor-networks"]
+            },
+            {
+                "id": "autonomous-vehicles",
+                "name": "Autonomous Vehicles",
+                "category": "AI Applications & Fields",
+                "definition": "Vehicles (cars, trucks, drones) capable of sensing their environment and operating without human involvement. They rely heavily on AI, particularly [Machine Learning](machine-learning), [Deep Learning](deep-learning), and [Edge AI](edge-ai) for perception, decision-making, and control.",
+                "analogy": "It's like a car that can see, think, and drive itself, navigating roads, avoiding obstacles, and reaching a destination without a human driver.",
+                "significance": "Potential to revolutionize transportation by improving safety, efficiency, and accessibility. Represents a major real-world application of advanced AI.",
+                "prompt": "What societal changes, both positive and negative, do you foresee with the widespread adoption of autonomous vehicles?",
+                "related": ["edge-ai", "machine-learning", "deep-learning", "computer-vision", "sensor-fusion"]
+            },
+            {
+                "id": "privacy-preserving-ai",
+                "name": "Privacy-Preserving AI",
+                "category": "Ethical & Societal Aspects",
+                "definition": "Techniques and approaches that allow AI models to be trained and used without exposing sensitive raw data. [Federated Learning](federated-learning) is one such technique. Others include differential privacy and homomorphic encryption.",
+                "analogy": "It's like being able to learn from a secret diary without actually reading its contents. The AI gets the insights it needs, but the private details remain confidential.",
+                "significance": "Essential for enabling AI in domains with sensitive data (e.g., healthcare, finance) while upholding user privacy and complying with regulations. Builds trust in AI systems.",
+                "prompt": "How important is it to you that AI systems protect your personal data, and what trade-offs (if any) would you be willing to make for more personalized AI services?",
+                "related": ["federated-learning", "ai-ethics", "data-security", "responsible-ai"]
+            },
+            {
+                "id": "decentralized-ai",
+                "name": "Decentralized AI",
+                "category": "AI Architectures & Deployment",
+                "definition": "An approach to AI where data, model training, and decision-making are distributed across multiple devices or nodes rather than being centralized in one location. [Edge AI](edge-ai) and [Federated Learning](federated-learning) are key components of decentralized AI.",
+                "analogy": "Instead of one central 'AI brain' controlling everything, imagine many smaller, interconnected AI brains working together, each with some autonomy and local knowledge.",
+                "significance": "Offers potential benefits in terms of scalability, resilience, privacy, and efficiency. It aligns with the trend towards more distributed computing systems.",
+                "prompt": "What are the potential advantages and disadvantages of an AI system that isn't controlled by a single entity?",
+                "related": ["edge-ai", "federated-learning", "blockchain-ai", "distributed-systems"]
+            },
+            {
+                "id": "artificial-intelligence",
+                "name": "Artificial Intelligence",
+                "category": "Foundational Concepts",
+                "definition": "The theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages. [Machine Learning](machine-learning) is a common way to achieve AI.",
+                "analogy": "It's the broad goal of making computers 'smart' like humans, or even in ways that surpass human capabilities for specific tasks.",
+                "significance": "A transformative technology with the potential to impact nearly every aspect of human life and industry.",
+                "prompt": "What does the term 'intelligence' mean to you, and how well do you think current AI systems capture that meaning?",
+                "related": ["machine-learning", "deep-learning", "neural-networks", "ai-ethics"]
+            }
+        ]
