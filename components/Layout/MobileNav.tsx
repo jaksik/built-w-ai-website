@@ -49,7 +49,7 @@ export function MobileNav() {
           <nav className="flex flex-col space-y-4">
             <Link
               href="/tools"
-              className={`text-lg flex items-center gap-3 ${pathname === "/tools" ? "text-blue-600 dark:text-blue-400" : "text-slate-900 dark:text-slate-50"}`}
+              className={`text-lg flex items-center gap-3 font-semibold text-md font-inter ${pathname === "/tools" ? "text-blue-600 dark:text-blue-400" : "text-slate-900 dark:text-slate-50"}`}
               onClick={toggleMenu}
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +61,7 @@ export function MobileNav() {
             </Link>
             <Link
               href="/news"
-              className={`text-lg flex items-center gap-3 ${pathname === "/news" ? "text-blue-600 dark:text-blue-400" : "text-slate-900 dark:text-slate-50"}`}
+              className={`text-lg flex items-center gap-3 font-semibold text-md font-inter ${pathname === "/news" ? "text-blue-600 dark:text-blue-400" : "text-slate-900 dark:text-slate-50"}`}
               onClick={toggleMenu}
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -73,7 +73,7 @@ export function MobileNav() {
             </Link>
             <Link
               href="/glossary"
-              className={`text-lg flex items-center gap-3 ${pathname === "/glossary" ? "text-blue-600 dark:text-blue-400" : "text-slate-900 dark:text-slate-50"}`}
+              className={`text-lg flex items-center gap-3 font-semibold text-md font-inter ${pathname === "/glossary" ? "text-blue-600 dark:text-blue-400" : "text-slate-900 dark:text-slate-50"}`}
               onClick={toggleMenu}
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

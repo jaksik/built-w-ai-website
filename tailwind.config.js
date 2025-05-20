@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Inter', 'Inter Fallback', 'sans-serif'],
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 }

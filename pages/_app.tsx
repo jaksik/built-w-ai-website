@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
                 <Link href="/" className="flex items-baseline logo-font">
                   <span className="text-3xl font-bold">Built</span>
-                  <span className="text-2xl font-semibold mx-2">with</span>
+                  <span className="text-xl font-semibold mx-1">with</span>
                   <span className="text-3xl font-bold">AI</span>
                 </Link>
 

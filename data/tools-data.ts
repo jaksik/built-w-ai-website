@@ -92,12 +92,12 @@ export const tools: Tool[] = [
   },
   {
     id: "10",
-    name: "Claude by Anthropic",
+    name: "Claude",
     category: "Chat Assistants",
     subcategory: "Specialized",
     url: "https://www.anthropic.com/claude",
     logoUrl: "/logos/anthropic.png",
-    description: "Collaborate with Claude, an AI assistant for brainstorming and building, designed for everyone."
+    description: "Collaborate with Claude (by Anthropic), an AI assistant for brainstorming and building, designed for everyone."
   },
   {
     id: "14",
