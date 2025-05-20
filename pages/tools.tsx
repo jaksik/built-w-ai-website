@@ -1,4 +1,4 @@
-import GetTools from "@/components/GetTools"
+import GetTools from "@/components/Tools"
 
 export default function NewsPage() {
   return (

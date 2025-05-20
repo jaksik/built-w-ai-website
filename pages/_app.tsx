@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
       <div className={inter.className}>
         <div className="antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50">
-          <div className="max-w-4xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
+          <div className="max-w-6xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
             <header className="mb-8">
               <div className="flex items-center justify-between">
 
