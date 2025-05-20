@@ -170,7 +170,7 @@ export function Glossary() {
 
             {/* Desktop Sidebar - Hidden on Mobile */}
             <div className="hidden lg:block md:col-span-3">
-                <div className="space-y-1 pr-4 sticky top-20 max-h-[calc(100vh-10rem)]"> {/* Added sticky, top, max-h and overflow */}
+                <div className="space-y-1 pr-1 sticky top-20 max-h-[calc(100vh-10rem)]"> {/* Added sticky, top, max-h and overflow */}
                     <p className="font-light text-sm mb-2">
                             Terms & Concepts:
                         </p>
