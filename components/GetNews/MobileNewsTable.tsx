@@ -9,7 +9,7 @@ interface NewsTableProps {
     isLoading?: boolean;
 }
 
-const truncateText = (text: string, maxLength: number = 100) => {
+const truncateText = (text: string, maxLength: number = 80) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
 };
 
@@ -24,10 +24,11 @@ export const MobileNewsTable = ({ news, onToggleActive, isLoading = false }: New
                         </th>
                     </tr>
                 </thead>
+                
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                     {!isLoading && news.map((article) => (
                         <div>
-                            <td className="w-7/12 px-6 py-4 whitespace-normal">
+                            <td className="px-6 py-4 whitespace-normal">
                                 <div className="flex flex-col">
                                     <span className="text-xs pb-2 text-gray-700 dark:text-gray-300">
                                         {formatDate(article.publishedAt)}
@@ -36,7 +37,7 @@ export const MobileNewsTable = ({ news, onToggleActive, isLoading = false }: New
                                         href={article.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-sm font-medium text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors"
+                                        className="text-sm text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors font-inter"
                                     >
                                         {truncateText(article.title)}
                                     </a>
@@ -52,11 +53,11 @@ export const MobileNewsTable = ({ news, onToggleActive, isLoading = false }: New
                     {isLoading && [...Array(8)].map((_, i) => (
                         <tr key={i}>
                             <td className="w-full px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-40"></div>
+                                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-60"></div>
                             </td>
-
                         </tr>
                     ))}
+
                 </tbody>
             </table>
         </div>

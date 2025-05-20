@@ -106,16 +106,20 @@ const GetNews: React.FC = () => {
           </button>
         ))}
       </div> */}
-        <MobileNewsTable
-          news={filteredNews}
-          onToggleActive={handleToggleActive}
-          isLoading={isLoading}
-        />
-        <NewsTable
-          news={filteredNews}
-          onToggleActive={handleToggleActive}
-          isLoading={isLoading}
-        />
+        <div className="block md:hidden">
+          <MobileNewsTable
+            news={filteredNews}
+            onToggleActive={handleToggleActive}
+            isLoading={isLoading}
+          />
+        </div>
+        <div className="hidden md:block">
+          <NewsTable
+            news={filteredNews}
+            onToggleActive={handleToggleActive}
+            isLoading={isLoading}
+          />
+        </div>
       </div>
     </div>
   );
