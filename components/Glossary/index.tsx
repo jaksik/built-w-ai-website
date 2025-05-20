@@ -173,7 +173,7 @@ export function Glossary() {
                 </div>
 
                 {/* Desktop Sidebar - Hidden on Mobile */}
-                <div className="hidden md:block md:col-span-4">
+                <div className="hidden md:block md:col-span-3">
                     <div className="space-y-1 pr-4 sticky top-20 max-h-[calc(100vh-10rem)] overflow-y-auto"> {/* Added sticky, top, max-h and overflow */}
                         {glossaryData.map((item) => (
                             <button
@@ -193,7 +193,7 @@ export function Glossary() {
                 </div>
 
                 {/* Main Content */}
-                <div id="glossary-content-area" className="md:col-span-8 max-h-[calc(100vh-10rem)] overflow-y-auto"> {/* Added id for scrolling */}
+                <div id="glossary-content-area" className="md:col-span-9 max-h-[calc(100vh-10rem)] overflow-y-auto"> {/* Added id for scrolling */}
                     {selectedItem ? (
                         <div className="p-6 sm:p-8 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
                             <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
