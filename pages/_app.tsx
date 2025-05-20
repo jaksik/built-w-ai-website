@@ -47,9 +47,9 @@ export default function App({ Component, pageProps }: AppProps) {
               <div className="flex items-center justify-between">
 
                 <Link href="/" className="flex items-baseline logo-font">
-                  <span className="text-4xl font-bold">Built</span>
-                  <span className="text-3xl font-semibold mx-2">with</span>
-                  <span className="text-4xl font-bold">AI</span>
+                  <span className="text-3xl font-bold">Built</span>
+                  <span className="text-2xl font-semibold mx-2">with</span>
+                  <span className="text-3xl font-bold">AI</span>
                 </Link>
 
                 <nav className="text-lg font-medium space-x-8 hidden md:flex items-center">

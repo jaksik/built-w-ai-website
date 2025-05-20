@@ -17,7 +17,7 @@ const ToolCard = ({ tool }: ToolCardProps) => (
     >
         <div className="flex gap-4">
             {/* Logo Section */}
-            <div className="w-12 h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg m-2 ms-3 
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg m-2 mt-1 ms-3 
                 ring-1 ring-gray-200 dark:ring-gray-800 group-hover:ring-gray-300 dark:group-hover:ring-gray-700 
                 transition-all duration-200">
                 <img
@@ -39,13 +39,14 @@ const ToolCard = ({ tool }: ToolCardProps) => (
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                     {tool.category}
                 </p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="hidden md:block text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {tool.description}
                 </p>
             </div>
-           <div className="w-7 h-7 flex-shrink-0 flex items-center justify-center 
+
+            <div className="w-7 h-7 flex-shrink-0 flex items-center justify-center 
                 translate-x-0 group-hover:translate-x-0.5 transition-transform duration-200">
-                                    <svg
+                <svg
                     className="w-6 h-6 text-blue-600 dark:text-sky-400 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
@@ -60,6 +61,13 @@ const ToolCard = ({ tool }: ToolCardProps) => (
                     />
                 </svg>
             </div>
+        </div>
+
+        {/* Mobile Description Section */}
+        <div className="block md:hidden p-4 pb-1">
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                {tool.description}
+            </p>
         </div>
     </a>
 );
