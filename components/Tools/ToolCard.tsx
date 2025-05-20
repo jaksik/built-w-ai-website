@@ -65,7 +65,7 @@ const ToolCard = ({ tool }: ToolCardProps) => (
 
         {/* Mobile Description Section */}
         <div className="block md:hidden p-4 pb-1">
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-inter font-medium">
                 {tool.description}
             </p>
         </div>

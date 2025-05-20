@@ -37,10 +37,10 @@ export default function Tools() {
 
     return (
         <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-6xl mx-auto">
 
                 {/* Mobile Dropdown */}
-                <div className="md:hidden relative w-full mb-6">
+                <div className="lg:hidden relative w-full mb-6">
                     <p className="font-light text-sm mb-2">
                         Categories:
                     </p>
@@ -87,31 +87,30 @@ export default function Tools() {
                 </div>
 
                 {/* Desktop Sidebar - Hidden on Mobile */}
-                <div className="hidden md:block md:col-span-3">
+                <div className="hidden lg:block lg:col-span-3">
                     <div className="space-y-1 pr-4 sticky top-20 max-h-[calc(100vh-10rem)] overflow-y-auto">
-                          <p className="font-light text-sm mb-2">
-                        Categories:
-                    </p>
+                        <p className="font-light text-sm mb-2">
+                            Categories:
+                        </p>
                         {categories.map((category) => (
                             <button
                                 key={category}
                                 onClick={() => setSelectedCategory(category)}
-                                className={`w-full text-left px-4 py-3 rounded-lg transition-all 
-                ${selectedCategory === category
+                                className={`w-full text-left px-4 py-3 rounded-lg transition-all ${selectedCategory === category
                                         ? "bg-gray-100 dark:bg-gray-800 shadow-sm"
                                         : "hover:bg-gray-50 dark:hover:bg-gray-900/70"
                                     }`}
                             >
-                                <span className="font-semibold text-md text-gray-900 dark:text-gray-100 font-inter">
+                                <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100 font-inter">
                                     {category}
-                                </span>
+                                </h3>
                             </button>
                         ))}
                     </div>
                 </div>
 
                 {/* Main Content */}
-                <div className="md:col-span-9">
+                <div className="lg:col-span-9">
                     <div className="grid grid-cols-1 gap-5">
                         {Object.entries(filteredTools).map(([category, tools]) => (
                             <React.Fragment key={category}>

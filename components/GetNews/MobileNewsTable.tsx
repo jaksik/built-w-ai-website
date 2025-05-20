@@ -9,7 +9,7 @@ interface NewsTableProps {
     isLoading?: boolean;
 }
 
-const truncateText = (text: string, maxLength: number = 80) => {
+const truncateText = (text: string, maxLength: number = 100) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
 };
 
@@ -37,7 +37,7 @@ export const MobileNewsTable = ({ news, onToggleActive, isLoading = false }: New
                                         href={article.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-sm text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors font-inter"
+                                        className="text-md font-medium text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors font-inter"
                                     >
                                         {truncateText(article.title)}
                                     </a>

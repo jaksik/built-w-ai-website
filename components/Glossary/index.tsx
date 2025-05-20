@@ -117,71 +117,46 @@ export function Glossary() {
     }
 
     return (
-        // <div className="container mx-auto px-4 py-8">
-        //     <section className="text-center space-y-4 mb-12">
-        //         <h1 className="text-3xl font-bold tracking-tight lg:text-5xl text-gray-900 dark:text-gray-100">
-        //             AI Glossary
-        //         </h1>
-        //         <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
-        //             Essential terms and concepts for understanding artificial intelligence.                </p>
-        //     </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto">
-                {/* Mobile Dropdown */}
-                <div className="md:hidden relative w-full mb-6">
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="w-full flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm text-gray-900 dark:text-gray-100"
-                        aria-expanded={isOpen}
-                        aria-controls="mobile-glossary-menu"
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-6xl mx-auto mb-10">
+            
+            {/* Mobile Dropdown */}
+            <div className="lg:hidden relative w-full mb-6">
+                <p className="font-light text-sm mb-2">
+                        Categories:
+                    </p>
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="w-full flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm text-gray-900 dark:text-gray-100"
+                    aria-expanded={isOpen}
+                    aria-controls="mobile-glossary-menu"
+                >
+                    <span className="font-semibold">
+                        {selectedItem?.name || "Select a term"}
+                    </span>
+                    <svg
+                        className={`w-5 h-5 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                     >
-                        <span className="font-semibold">
-                            {selectedItem?.name || "Select a term"}
-                        </span>
-                        <svg
-                            className={`w-5 h-5 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
+                        <path d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
 
-                    {isOpen && (
-                        <div
-                            id="mobile-glossary-menu"
-                            className="absolute z-10 w-full mt-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg max-h-60 overflow-y-auto"
-                        >
-                            {glossaryData.map((item) => (
-                                <button
-                                    key={item.id}
-                                    onClick={() => handleTermSelect(item.id)}
-                                    className={`w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 ${selectedTermId === item.id ? "bg-gray-100 dark:bg-gray-800" : ""
-                                        }`}
-                                >
-                                    <h3 className="font-semibold text-md text-gray-900 dark:text-gray-100">
-                                        {item.name}
-                                    </h3>
-                                </button>
-                            ))}
-                        </div>
-                    )}
-                </div>
-
-                {/* Desktop Sidebar - Hidden on Mobile */}
-                <div className="hidden md:block md:col-span-3">
-                    <div className="space-y-1 pr-4 sticky top-20 max-h-[calc(100vh-10rem)] overflow-y-auto"> {/* Added sticky, top, max-h and overflow */}
+                {isOpen && (
+                    <div
+                        id="mobile-glossary-menu"
+                        className="absolute z-10 w-full mt-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg max-h-60 overflow-y-auto"
+                    >
                         {glossaryData.map((item) => (
                             <button
                                 key={item.id}
                                 onClick={() => handleTermSelect(item.id)}
-                                className={`w-full text-left px-4 py-3 rounded-lg transition-all ${selectedTermId === item.id
-                                    ? "bg-gray-100 dark:bg-gray-800 shadow-sm"
-                                    : "hover:bg-gray-50 dark:hover:bg-gray-900/70"
+                                className={`w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 ${selectedTermId === item.id ? "bg-gray-100 dark:bg-gray-800" : ""
                                     }`}
                             >
                                 <h3 className="font-semibold text-md text-gray-900 dark:text-gray-100">
@@ -190,62 +165,86 @@ export function Glossary() {
                             </button>
                         ))}
                     </div>
-                </div>
+                )}
+            </div>
 
-                {/* Main Content */}
-                <div id="glossary-content-area" className="md:col-span-9 max-h-[calc(100vh-10rem)] overflow-y-auto"> {/* Added id for scrolling */}
-                    {selectedItem ? (
-                        <div className="p-6 sm:p-8 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
-                            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                                {selectedItem.name}
-                            </h2>
-
-                            <div className="space-y-6 prose prose-sm sm:prose dark:prose-invert max-w-none">
-                                <div>
-                                    <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-1">
-                                        Definition
-                                    </h3>
-                                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        {parseInterlinksReact(selectedItem.definition, selectedItem.id, handleTermSelect, glossaryData) || "Not available."}
-                                    </p>
-                                </div>
-
-                                {selectedItem.analogy && (
-                                    <div>
-                                        <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-1">
-                                            Analogy
-                                        </h3>
-                                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed italic">
-                                            {parseInterlinksReact(selectedItem.analogy, selectedItem.id, handleTermSelect, glossaryData)}
-                                        </p>
-                                    </div>
-                                )}
-
-                                {selectedItem.significance && (
-                                    <div>
-                                        <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-1">
-                                            Why it Matters
-                                        </h3>
-                                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                            {parseInterlinksReact(selectedItem.significance, selectedItem.id, handleTermSelect, glossaryData)}
-                                        </p>
-                                    </div>
-                                )}
-
-                                <div className="pt-4">
-                                    <span className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full font-medium text-gray-700 dark:text-gray-300">
-                                        Category: {selectedItem.category}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="p-8 text-center text-gray-500 dark:text-gray-400">
-                            <p>Select a term to see its details.</p>
-                        </div>
-                    )}
+            {/* Desktop Sidebar - Hidden on Mobile */}
+            <div className="hidden lg:block md:col-span-3">
+                <div className="space-y-1 pr-4 sticky top-20 max-h-[calc(100vh-10rem)]"> {/* Added sticky, top, max-h and overflow */}
+                    <p className="font-light text-sm mb-2">
+                            Terms & Concepts:
+                        </p>
+                    {glossaryData.map((item) => (
+                        <button
+                            key={item.id}
+                            onClick={() => handleTermSelect(item.id)}
+                            className={`w-full text-left px-4 py-3 rounded-lg transition-all ${selectedTermId === item.id
+                                ? "bg-gray-100 dark:bg-gray-800 shadow-sm"
+                                : "hover:bg-gray-50 dark:hover:bg-gray-900/70"
+                                }`}
+                        >
+                            <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100 font-inter">
+                                {item.name}
+                            </h3>
+                        </button>
+                    ))}
                 </div>
             </div>
+
+            {/* Main Content */}
+            <div id="glossary-content-area" className="lg:col-span-9 max-h-[calc(100vh-10rem)]"> {/* Added id for scrolling */}
+                {selectedItem ? (
+                    <div className="p-6 sm:p-8 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
+                        <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                            {selectedItem.name}
+                        </h2>
+
+                        <div className="space-y-6 prose prose-sm sm:prose dark:prose-invert max-w-none">
+                            <div>
+                                <h3 className="font-semibold text-md text-gray-800 dark:text-gray-200 mb-1">
+                                    Definition
+                                </h3>
+                                <p className="text-gray-600 text-sm dark:text-gray-300 leading-relaxed">
+                                    {parseInterlinksReact(selectedItem.definition, selectedItem.id, handleTermSelect, glossaryData) || "Not available."}
+                                </p>
+                            </div>
+
+                            {selectedItem.analogy && (
+                                <div>
+                                    <h3 className="font-semibold text-md text-gray-800 dark:text-gray-200 mb-1">
+                                        Analogy
+                                    </h3>
+                                    <p className="text-gray-600 text-sm dark:text-gray-300 leading-relaxed italic">
+                                        {parseInterlinksReact(selectedItem.analogy, selectedItem.id, handleTermSelect, glossaryData)}
+                                    </p>
+                                </div>
+                            )}
+
+                            {selectedItem.significance && (
+                                <div>
+                                    <h3 className="font-semibold text-md text-gray-800 dark:text-gray-200 mb-1">
+                                        Why it Matters
+                                    </h3>
+                                    <p className="text-gray-600 text-sm dark:text-gray-300 leading-relaxed">
+                                        {parseInterlinksReact(selectedItem.significance, selectedItem.id, handleTermSelect, glossaryData)}
+                                    </p>
+                                </div>
+                            )}
+
+                            <div className="pt-4">
+                                <span className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full font-medium text-gray-700 dark:text-gray-300">
+                                    Category: {selectedItem.category}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="p-8 text-center text-gray-500 dark:text-gray-400">
+                        <p>Select a term to see its details.</p>
+                    </div>
+                )}
+            </div>
+        </div>
     );
 }
 // ```
