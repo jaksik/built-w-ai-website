@@ -36,35 +36,14 @@ export default function Tools() {
     }, [selectedCategory, toolsByCategory])
 
     return (
-        <div className="space-y-6">
-            {/* Category Info Section */}
-            {/* <div className="max-w-6xl mx-auto">
-                <div className="flex items-center gap-3 px-4 py-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-800">
-                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30">
-                        <svg 
-                            className="w-4 h-4 text-blue-600 dark:text-sky-400" 
-                            fill="none" 
-                            viewBox="0 0 24 24" 
-                            stroke="currentColor"
-                        >
-                            <path 
-                                strokeLinecap="round" 
-                                strokeLinejoin="round" 
-                                strokeWidth={2} 
-                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" 
-                            />
-                        </svg>
-                    </div>
-                    <div>
-                        <h2 className="text-sm font-medium text-gray-600 dark:text-gray-400">Currently viewing</h2>
-                        <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">{selectedCategory} Tools</p>
-                    </div>
-                </div>
-            </div> */}
-
+        <div className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto">
+
                 {/* Mobile Dropdown */}
                 <div className="md:hidden relative w-full mb-6">
+                    <p className="font-light text-sm mb-2">
+                        Categories:
+                    </p>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="w-full flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm text-gray-900 dark:text-gray-100"
@@ -98,7 +77,7 @@ export default function Tools() {
                                     className={`w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 
                   ${selectedCategory === category ? "bg-gray-100 dark:bg-gray-800" : ""}`}
                                 >
-                                    <span className="font-semibold text-md text-gray-900 dark:text-gray-100">
+                                    <span className="font-semibold text-md text-gray-900 dark:text-gray-100 font-inter">
                                         {category}
                                     </span>
                                 </button>
@@ -110,6 +89,9 @@ export default function Tools() {
                 {/* Desktop Sidebar - Hidden on Mobile */}
                 <div className="hidden md:block md:col-span-3">
                     <div className="space-y-1 pr-4 sticky top-20 max-h-[calc(100vh-10rem)] overflow-y-auto">
+                          <p className="font-light text-sm mb-2">
+                        Categories:
+                    </p>
                         {categories.map((category) => (
                             <button
                                 key={category}
@@ -120,7 +102,7 @@ export default function Tools() {
                                         : "hover:bg-gray-50 dark:hover:bg-gray-900/70"
                                     }`}
                             >
-                                <span className="font-semibold text-md text-gray-900 dark:text-gray-100">
+                                <span className="font-semibold text-md text-gray-900 dark:text-gray-100 font-inter">
                                     {category}
                                 </span>
                             </button>

@@ -17,7 +17,7 @@ const ToolCard = ({ tool }: ToolCardProps) => (
     >
         <div className="flex gap-4">
             {/* Logo Section */}
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg m-2 mt-1 ms-3 
+            <div className="w-10 h-10 bg-white flex-shrink-0 flex items-center justify-center rounded-lg m-2 mt-1 ms-3 
                 ring-1 ring-gray-200 dark:ring-gray-800 group-hover:ring-gray-300 dark:group-hover:ring-gray-700 
                 transition-all duration-200">
                 <img
@@ -39,7 +39,7 @@ const ToolCard = ({ tool }: ToolCardProps) => (
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                     {tool.category}
                 </p>
-                <p className="hidden md:block text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="hidden md:block text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     {tool.description}
                 </p>
             </div>
