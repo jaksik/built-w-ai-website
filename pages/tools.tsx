@@ -3,7 +3,7 @@ import GetTools from "@/components/Tools"
 export default function ToolsPage() {
   return (
     <div className="space-y-8 pb-8 min-h-screen">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-2 py-8">
 
         {/* Page Header Section */}
         <section className="text-center space-y-4 mb-12">

@@ -71,7 +71,7 @@
             },
             {
                 "id": "explainable-ai",
-                "name": "Explainable AI (XAI)",
+                "name": "Explainable AI",
                 "category": "Ethical & Societal Aspects",
                 "definition": "A set of methods and techniques in artificial intelligence that allows human users to understand and trust the results and output created by AI algorithms. XAI aims to make AI decisions less of a 'black box,' especially for complex models like those used in [Deep Learning](deep-learning).",
                 "analogy": "Imagine an AI doctor that not only gives a diagnosis but also clearly explains the symptoms and test results that led to that conclusion, just like a human doctor would.",

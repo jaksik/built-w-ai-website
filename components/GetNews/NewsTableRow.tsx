@@ -14,11 +14,11 @@ const truncateText = (text: string, maxLength: number = 100) => {
 
 export const NewsTableRow = ({ article, onToggleActive }: NewsTableRowProps) => (
     <tr key={article._id.toString()} className="transition-colors">
-        <td className="w-2/12 px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+        <td className="w-2/12 px-6 py-4 whitespace-nowrap text-xs md:text-[0.625rem] text-gray-500 dark:text-gray-400">
             {formatDate(article.publishedAt)}
         </td>
 
-        <td className="w-7/12 px-6 py-4 whitespace-normal">
+        <td className="w-7/12 py-2 md:pl-2 whitespace-normal">
             <div className="flex flex-col">
                 <a
                     href={article.link}
@@ -28,7 +28,9 @@ export const NewsTableRow = ({ article, onToggleActive }: NewsTableRowProps) => 
                 >
                     {truncateText(article.title)}
                 </a>
-                <span className="text-xs pt-3 text-gray-700 dark:text-gray-300">{article.source}</span>
+                <span className="text-xs pt-1 md:text-[0.625rem] text-gray-700 dark:text-gray-300">
+                    {article.source}
+                </span>
             </div>
         </td>
 
