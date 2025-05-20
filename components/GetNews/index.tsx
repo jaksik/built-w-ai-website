@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { INews } from '@/models/News';
 import { NewsTable } from './NewsTable';
-import { NewsTableSkeleton } from './NewsTableSkeleton';
 import { getCategoryColorClasses } from './CategoryColorClasses';
-
+import { MobileNewsTable } from './MobileNewsTable';
 const categories = [
   "All",
   "Macro Shifts",
@@ -76,14 +75,6 @@ const GetNews: React.FC = () => {
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="max-w-[1200px] mx-auto px-4">
-        <NewsTableSkeleton />
-      </div>
-    );
-  }
-
   if (error) {
     return (
       <div className="max-w-[900px] mx-auto my-8">
@@ -95,27 +86,38 @@ const GetNews: React.FC = () => {
   }
 
   return (
-      <div className="max-w-[1200px] mx-auto px-4">
-        <div className="mb-6 flex gap-2 flex-wrap justify-center">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveFilter(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all
-              ${category === activeFilter ? 'ring-2 ring-offset-2 ' : ''}
-              ${category === "All"
-                  ? activeFilter === category
-                    ? "bg-white text-gray-900 ring-gray-400 dark:bg-gray-900 dark:text-white dark:ring-gray-900"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
-                  : getCategoryColorClasses(category)
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        <NewsTable news={filteredNews} onToggleActive={handleToggleActive} />
+    <div className="space-y-4">
+      <div className="mx-auto">
+        {/* <div className="mb-6 flex gap-2 flex-wrap justify-center">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveFilter(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+            ${category === activeFilter ? 'ring-2 ring-offset-2 ' : ''}
+            ${category === "All"
+                ? activeFilter === category
+                  ? "bg-white text-gray-900 ring-gray-400 dark:bg-gray-900 dark:text-white dark:ring-gray-900"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                : getCategoryColorClasses(category)
+              }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div> */}
+        <MobileNewsTable
+          news={filteredNews}
+          onToggleActive={handleToggleActive}
+          isLoading={isLoading}
+        />
+        <NewsTable
+          news={filteredNews}
+          onToggleActive={handleToggleActive}
+          isLoading={isLoading}
+        />
       </div>
+    </div>
   );
 };
 

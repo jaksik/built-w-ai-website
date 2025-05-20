@@ -6,9 +6,10 @@ import { NewsTableRow } from './NewsTableRow';
 interface NewsTableProps {
     news: INews[];
     onToggleActive: (id: string, currentActive: boolean) => Promise<void>;
+    isLoading?: boolean;
 }
 
-export const NewsTable = ({ news, onToggleActive }: NewsTableProps) => (
+export const NewsTable = ({ news, onToggleActive, isLoading = false }: NewsTableProps) => (
     <div className="bg-white dark:bg-gray-800/50 rounded-xl shadow-lg overflow-hidden border dark:border-gray-700">
         <div className="overflow-x-auto">
             <table className="w-full table-fixed divide-y divide-gray-200 dark:divide-gray-700">
@@ -27,12 +28,27 @@ export const NewsTable = ({ news, onToggleActive }: NewsTableProps) => (
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                    {news.map((article) => (
+                    {!isLoading && news.map((article) => (
                         <NewsTableRow
                             key={article._id.toString()}
                             article={article}
                             onToggleActive={onToggleActive}
                         />
+                    ))}
+
+                    {/* Render filler when loading */}
+                    {isLoading && [...Array(8)].map((_, i) => (
+                        <tr key={i}>
+                            <td className="w-2/12 px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-20"></div>
+                            </td>
+                            <td className="w-8/12 px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-50"></div>
+                            </td>
+                            <td className="w-2/12 px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-20"></div>
+                            </td>
+                        </tr>
                     ))}
                 </tbody>
             </table>
