@@ -32,7 +32,7 @@ const GetNews: React.FC = () => {
         }
         const { data } = await response.json();
         // Create a promise that resolves after 2 seconds
-        const minLoadingTime = new Promise(resolve => setTimeout(resolve, 1500));
+        const minLoadingTime = new Promise(resolve => setTimeout(resolve, 111500));
 
         // Wait for both the data and the minimum time
         await Promise.all([minLoadingTime]);
@@ -95,7 +95,6 @@ const GetNews: React.FC = () => {
   }
 
   return (
-    <div>
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="mb-6 flex gap-2 flex-wrap justify-center">
           {categories.map((category) => (
@@ -117,7 +116,6 @@ const GetNews: React.FC = () => {
         </div>
         <NewsTable news={filteredNews} onToggleActive={handleToggleActive} />
       </div>
-    </div>
   );
 };
 

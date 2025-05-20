@@ -79,7 +79,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 </div>
               </div>
             </header>
-            <main className="flex-grow">
+            <main className="flex-grow max-w-[1200px] mx-auto">
               <Component {...pageProps} />
             </main>
             <footer className="mt-3 py-8 pb-0">
