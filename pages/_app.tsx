@@ -17,7 +17,7 @@ const navigationLinks = [
   { href: "/tools", label: "Tools" },
   { href: "/news", label: "News" },
   { href: "/glossary", label: "Glossary" },
-  { href: "/labs", label: "Labs" },
+  // { href: "/labs", label: "Labs" },
 ]
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -42,17 +42,17 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
       <div className={inter.className}>
         <div className="antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50">
-          <div className="max-w-6xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
+          <div className="max-w-7xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
             <header className="mb-8">
               <div className="flex items-center justify-between">
 
                 <Link href="/" className="flex items-baseline logo-font">
-                  <span className="text-3xl font-bold">Built</span>
-                  <span className="text-2xl font-semibold mx-2">with</span>
-                  <span className="text-3xl font-bold">AI</span>
+                  <span className="text-4xl font-bold">Built</span>
+                  <span className="text-3xl font-semibold mx-2">with</span>
+                  <span className="text-4xl font-bold">AI</span>
                 </Link>
 
-                <nav className="text-base font-medium space-x-6 hidden md:flex items-center">
+                <nav className="text-lg font-medium space-x-8 hidden md:flex items-center">
                   {navigationLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }: AppProps) {
                       {link.label}
                     </Link>
                   ))}
-                  <div className="ml-6">
+                  <div className="ml-8 pr-4">
                     <ModeToggle />
                   </div>
                 </nav>

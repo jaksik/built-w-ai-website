@@ -32,7 +32,7 @@ const GetNews: React.FC = () => {
         }
         const { data } = await response.json();
         // Create a promise that resolves after 2 seconds
-        const minLoadingTime = new Promise(resolve => setTimeout(resolve, 111500));
+        const minLoadingTime = new Promise(resolve => setTimeout(resolve, 1500));
 
         // Wait for both the data and the minimum time
         await Promise.all([minLoadingTime]);
