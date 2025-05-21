@@ -1,6 +1,6 @@
 export const getCategoryColorClasses = (category: string): string => {
     switch (category) {
-        case 'Macro Shifts':
+        case 'Industry Shifts':
             return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 ring-blue-600 dark:ring-blue-500';
         case 'AI Agents':
             return 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 ring-purple-600 dark:ring-purple-500';
@@ -14,3 +14,22 @@ export const getCategoryColorClasses = (category: string): string => {
             return 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-300 ring-gray-600 dark:ring-gray-500';
     }
 };
+
+        {/* <div className="mb-6 flex gap-2 flex-wrap justify-center">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveFilter(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+            ${category === activeFilter ? 'ring-2 ring-offset-2 ' : ''}
+            ${category === "All"
+                ? activeFilter === category
+                  ? "bg-white text-gray-900 ring-gray-400 dark:bg-gray-900 dark:text-white dark:ring-gray-900"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                : getCategoryColorClasses(category)
+              }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div> */}

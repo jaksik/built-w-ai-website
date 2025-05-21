@@ -1,15 +1,14 @@
 import React from 'react';
-import { INews } from '@/models/News';
+import { IArticle } from '@/models/Article';
 import { formatDate } from '@/lib/dateUtils';
-import { NewsTableRow } from './NewsTableRow';
+import { ArticleTableRow } from './ArticleTableRow';
 
-interface NewsTableProps {
-    news: INews[];
-    onToggleActive: (id: string, currentActive: boolean) => Promise<void>;
+interface ArticleTableProps {
+    articles: IArticle[];
     isLoading?: boolean;
 }
 
-export const NewsTable = ({ news, onToggleActive, isLoading = false }: NewsTableProps) => (
+export const ArticleTable = ({ articles, isLoading = false }: ArticleTableProps) => (
     <div className="bg-white dark:bg-gray-800/50 rounded-xl shadow-lg overflow-hidden border dark:border-gray-700">
         <div className="overflow-x-auto">
             <table className="w-full table-fixed divide-y divide-gray-200 dark:divide-gray-700">
@@ -28,11 +27,10 @@ export const NewsTable = ({ news, onToggleActive, isLoading = false }: NewsTable
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                    {!isLoading && news.map((article) => (
-                        <NewsTableRow
+                    {!isLoading && articles.map((article) => (
+                        <ArticleTableRow
                             key={article._id.toString()}
                             article={article}
-                            onToggleActive={onToggleActive}
                         />
                     ))}
 

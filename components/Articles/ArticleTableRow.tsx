@@ -1,18 +1,17 @@
 import React from 'react';
-import { INews } from '@/models/News';
+import { IArticle } from '@/models/Article';
 import { formatDate } from '@/lib/dateUtils';
 import { getCategoryColorClasses } from './CategoryColorClasses';
 
-interface NewsTableRowProps {
-    article: INews;
-    onToggleActive: (id: string, currentActive: boolean) => Promise<void>;
+interface ArticleTableRowProps {
+    article: IArticle;
 }
 
 const truncateText = (text: string, maxLength: number = 100) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
 };
 
-export const NewsTableRow = ({ article, onToggleActive }: NewsTableRowProps) => (
+export const ArticleTableRow = ({ article }: ArticleTableRowProps) => (
     <tr key={article._id.toString()} className="transition-colors">
         <td className="w-2/12 px-6 py-4 whitespace-nowrap text-xs md:text-[0.625rem] text-gray-500 dark:text-gray-400">
             {formatDate(article.publishedAt)}

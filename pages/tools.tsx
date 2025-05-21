@@ -1,4 +1,5 @@
 import GetTools from "@/components/Tools"
+import EmailCapture from "@/components/EmailCapture"
 
 export default function ToolsPage() {
   return (
@@ -22,6 +23,7 @@ export default function ToolsPage() {
 
         {/* Tools directory component */}
         <GetTools />
+        <EmailCapture />
 
       </div>
     </div>
