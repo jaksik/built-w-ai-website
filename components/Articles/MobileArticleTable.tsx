@@ -1,11 +1,9 @@
 import React from 'react';
-import { INews } from '@/models/News';
+import { IArticle } from '@/models/Article';
 import { formatDate } from '@/lib/dateUtils';
-import { NewsTableRow } from './NewsTableRow';
 
-interface NewsTableProps {
-    news: INews[];
-    onToggleActive: (id: string, currentActive: boolean) => Promise<void>;
+interface ArticleTableProps {
+    articles: IArticle[];
     isLoading?: boolean;
 }
 
@@ -13,7 +11,7 @@ const truncateText = (text: string, maxLength: number = 100) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
 };
 
-export const MobileNewsTable = ({ news, onToggleActive, isLoading = false }: NewsTableProps) => (
+export const MobileArticleTable = ({ articles, isLoading = false }: ArticleTableProps ) => (
     <div className="bg-white dark:bg-gray-800/50 rounded-xl shadow-lg overflow-hidden border dark:border-gray-700">
         <div className="overflow-x-auto">
             <table className="w-full table-fixed divide-y divide-gray-200 dark:divide-gray-700">
@@ -26,7 +24,7 @@ export const MobileNewsTable = ({ news, onToggleActive, isLoading = false }: New
                 </thead>
                 
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                    {!isLoading && news.map((article) => (
+                    {!isLoading && articles.map((article) => (
                         <div>
                             <td className="px-6 py-4 whitespace-normal">
                                 <div className="flex flex-col">

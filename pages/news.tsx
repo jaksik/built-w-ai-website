@@ -1,5 +1,5 @@
-import GetNews from "@/components/GetNews"
-
+import GetArticles from "@/components/Articles"
+import EmailCapture from "@/components/EmailCapture"
 
 export default function NewsPage() {
   return (
@@ -10,7 +10,7 @@ export default function NewsPage() {
             AI News
           </h1>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
-            Understand the evolution and trajectory of artificial intelligence through the latest news and updates. 
+            Understand the evolution and trajectory of artificial intelligence through the latest news and updates.
             {/* Stay informed about the latest product releases, industry shifts, and frontier research. */}
           </p>
           {/* Stylish Line Break */}
@@ -18,7 +18,8 @@ export default function NewsPage() {
             <div className="h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent" />
           </div>
         </section>
-        <GetNews />
+        <GetArticles />
+        <EmailCapture />
       </div>
     </div>
   )
