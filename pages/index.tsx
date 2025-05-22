@@ -49,15 +49,6 @@ export default function LandingPage() {
           href="/glossary"
           icon={GlossaryIcon} // Placeholder for an actual icon component
         />
-        {/* You can add a card for Labs if you decide to feature it prominently */}
-        {/*
-        <FeatureCard
-          title="AI Labs"
-          description="Engage in hands-on activities and experiments to deepen your understanding of AI applications."
-          href="/labs"
-          icon={LabsIcon} // Placeholder for an actual icon component
-        />
-        */}
       </section>
     </div>
   );

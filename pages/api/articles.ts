@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         
         console.log('Fetching Article with query:', query);
 
-        const articles = await Article.find(query).sort({ createdAt: -1 });
+        const articles = await Article.find(query).sort({ publishedAt: -1 });
 
         console.log('Found Article articles:', articles.length);
         console.log('Response from Article API');
