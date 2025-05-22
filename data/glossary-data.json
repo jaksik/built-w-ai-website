@@ -1,4 +1,44 @@
         [
+                        {
+                "id": "artificial-intelligence",
+                "name": "Artificial Intelligence",
+                "category": "Foundational Concepts",
+                "definition": "The theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages. [Machine Learning](machine-learning) is a common way to achieve AI.",
+                "analogy": "It's the broad goal of making computers 'smart' like humans, or even in ways that surpass human capabilities for specific tasks.",
+                "significance": "A transformative technology with the potential to impact nearly every aspect of human life and industry.",
+                "prompt": "What does the term 'intelligence' mean to you, and how well do you think current AI systems capture that meaning?",
+                "related": ["machine-learning", "deep-learning", "neural-networks", "ai-ethics"]
+            },
+                        {
+                "id": "machine-learning",
+                "name": "Machine Learning",
+                "category": "Foundational Concepts",
+                "definition": "A subfield of artificial intelligence where computer systems use algorithms and statistical models to perform tasks without explicit instructions, relying on patterns and inference instead. Systems learn from data to improve their performance over time. [Deep Learning](deep-learning) is a popular type of ML.",
+                "analogy": "It's like teaching a child by showing them many examples. You don't write down every single rule for recognizing a cat; you show them many pictures of cats, and they eventually learn to identify cats on their own.",
+                "significance": "The engine behind most modern AI applications, from recommendation systems and spam filters to medical diagnosis and [Autonomous Vehicles](autonomous-vehicles). It allows computers to tackle complex problems that are difficult to program explicitly.",
+                "prompt": "Think about a repetitive task you do. Could Machine Learning potentially automate or assist with it by learning from past examples?",
+                "related": ["deep-learning", "neural-networks", "supervised-learning", "unsupervised-learning", "artificial-intelligence"]
+            },
+                        {
+                "id": "deep-learning",
+                "name": "Deep Learning",
+                "category": "Machine Learning Techniques",
+                "definition": "A specialized subset of [Machine Learning](machine-learning) that uses artificial [Neural Networks](neural-networks) with multiple layers (hence 'deep') to analyze various factors of data. It excels at tasks like image recognition, natural language processing, and speech recognition.",
+                "analogy": "If Machine Learning is like teaching a child, Deep Learning is like how a child's brain, with its many interconnected neurons, learns to recognize complex patterns by processing information through different layers of abstraction.",
+                "significance": "Powers many of the most advanced AI breakthroughs, including sophisticated [Generative AI](generative-ai) models, advanced image understanding, and human-like language translation.",
+                "prompt": "Deep Learning has enabled computers to 'see' and 'hear' with remarkable accuracy. What new possibilities does this unlock for human-computer interaction or accessibility?",
+                "related": ["machine-learning", "neural-networks", "generative-ai", "computer-vision", "nlp"]
+            },
+                        {
+                "id": "generative-ai",
+                "name": "Generative AI",
+                "category": "AI Applications & Fields",
+                "definition": "A class of AI models that can create new, original content, such as text, images, audio, video, or code, rather than just analyzing or acting on existing data. Examples include models like GPT for text or DALL-E for images. Often built using [Deep Learning](deep-learning) techniques.",
+                "analogy": "Think of it as an AI artist, writer, or composer. You give it a prompt or some input, and it generates a brand new piece of art, a story, or a musical composition that didn't exist before.",
+                "significance": "Revolutionizing content creation, design, and even scientific discovery. It has the potential to augment human creativity and automate many creative tasks. There's ongoing research to make these models runnable via [Edge AI](edge-ai).",
+                "prompt": "If you had access to an AI that could generate any kind of content you imagine, what would you create first and why?",
+                "related": ["deep-learning", "nlp", "computer-vision", "large-language-models"]
+            },
             {
                 "id": "edge-ai",
                 "name": "Edge AI",
@@ -30,26 +70,6 @@
                 "related": ["edge-ai", "machine-learning", "iot", "embedded-systems"]
             },
             {
-                "id": "machine-learning",
-                "name": "Machine Learning",
-                "category": "Foundational Concepts",
-                "definition": "A subfield of artificial intelligence where computer systems use algorithms and statistical models to perform tasks without explicit instructions, relying on patterns and inference instead. Systems learn from data to improve their performance over time. [Deep Learning](deep-learning) is a popular type of ML.",
-                "analogy": "It's like teaching a child by showing them many examples. You don't write down every single rule for recognizing a cat; you show them many pictures of cats, and they eventually learn to identify cats on their own.",
-                "significance": "The engine behind most modern AI applications, from recommendation systems and spam filters to medical diagnosis and [Autonomous Vehicles](autonomous-vehicles). It allows computers to tackle complex problems that are difficult to program explicitly.",
-                "prompt": "Think about a repetitive task you do. Could Machine Learning potentially automate or assist with it by learning from past examples?",
-                "related": ["deep-learning", "neural-networks", "supervised-learning", "unsupervised-learning", "artificial-intelligence"]
-            },
-            {
-                "id": "deep-learning",
-                "name": "Deep Learning",
-                "category": "Machine Learning Techniques",
-                "definition": "A specialized subset of [Machine Learning](machine-learning) that uses artificial [Neural Networks](neural-networks) with multiple layers (hence 'deep') to analyze various factors of data. It excels at tasks like image recognition, natural language processing, and speech recognition.",
-                "analogy": "If Machine Learning is like teaching a child, Deep Learning is like how a child's brain, with its many interconnected neurons, learns to recognize complex patterns by processing information through different layers of abstraction.",
-                "significance": "Powers many of the most advanced AI breakthroughs, including sophisticated [Generative AI](generative-ai) models, advanced image understanding, and human-like language translation.",
-                "prompt": "Deep Learning has enabled computers to 'see' and 'hear' with remarkable accuracy. What new possibilities does this unlock for human-computer interaction or accessibility?",
-                "related": ["machine-learning", "neural-networks", "generative-ai", "computer-vision", "nlp"]
-            },
-            {
                 "id": "neural-networks",
                 "name": "Neural Networks",
                 "category": "Machine Learning Techniques",
@@ -58,16 +78,6 @@
                 "significance": "The foundational architecture for most [Deep Learning](deep-learning) models, enabling them to learn complex patterns and representations from data.",
                 "prompt": "Neural networks learn by adjusting connections. How does this mimic aspects of biological learning, and what are the limitations of this analogy?",
                 "related": ["deep-learning", "machine-learning", "artificial-intelligence"]
-            },
-            {
-                "id": "generative-ai",
-                "name": "Generative AI",
-                "category": "AI Applications & Fields",
-                "definition": "A class of AI models that can create new, original content, such as text, images, audio, video, or code, rather than just analyzing or acting on existing data. Examples include models like GPT for text or DALL-E for images. Often built using [Deep Learning](deep-learning) techniques.",
-                "analogy": "Think of it as an AI artist, writer, or composer. You give it a prompt or some input, and it generates a brand new piece of art, a story, or a musical composition that didn't exist before.",
-                "significance": "Revolutionizing content creation, design, and even scientific discovery. It has the potential to augment human creativity and automate many creative tasks. There's ongoing research to make these models runnable via [Edge AI](edge-ai).",
-                "prompt": "If you had access to an AI that could generate any kind of content you imagine, what would you create first and why?",
-                "related": ["deep-learning", "nlp", "computer-vision", "large-language-models"]
             },
             {
                 "id": "explainable-ai",
@@ -118,15 +128,5 @@
                 "significance": "Offers potential benefits in terms of scalability, resilience, privacy, and efficiency. It aligns with the trend towards more distributed computing systems.",
                 "prompt": "What are the potential advantages and disadvantages of an AI system that isn't controlled by a single entity?",
                 "related": ["edge-ai", "federated-learning", "blockchain-ai", "distributed-systems"]
-            },
-            {
-                "id": "artificial-intelligence",
-                "name": "Artificial Intelligence",
-                "category": "Foundational Concepts",
-                "definition": "The theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages. [Machine Learning](machine-learning) is a common way to achieve AI.",
-                "analogy": "It's the broad goal of making computers 'smart' like humans, or even in ways that surpass human capabilities for specific tasks.",
-                "significance": "A transformative technology with the potential to impact nearly every aspect of human life and industry.",
-                "prompt": "What does the term 'intelligence' mean to you, and how well do you think current AI systems capture that meaning?",
-                "related": ["machine-learning", "deep-learning", "neural-networks", "ai-ethics"]
             }
         ]

@@ -183,7 +183,7 @@ export function Glossary() {
                                 : "hover:bg-gray-50 dark:hover:bg-gray-900/70"
                                 }`}
                         >
-                            <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100 font-inter">
+                            <h3 className="font-semibold text-md text-gray-900 dark:text-gray-100 font-inter">
                                 {item.name}
                             </h3>
                         </button>
@@ -204,7 +204,7 @@ export function Glossary() {
                                 <h3 className="font-semibold text-md text-gray-800 dark:text-gray-200 mb-1">
                                     Definition
                                 </h3>
-                                <p className="text-gray-600 text-sm dark:text-gray-300 leading-relaxed">
+                                <p className="text-gray-600 text-md dark:text-gray-300 leading-relaxed">
                                     {parseInterlinksReact(selectedItem.definition, selectedItem.id, handleTermSelect, glossaryData) || "Not available."}
                                 </p>
                             </div>
@@ -214,7 +214,7 @@ export function Glossary() {
                                     <h3 className="font-semibold text-md text-gray-800 dark:text-gray-200 mb-1">
                                         Analogy
                                     </h3>
-                                    <p className="text-gray-600 text-sm dark:text-gray-300 leading-relaxed italic">
+                                    <p className="text-gray-600 text-md dark:text-gray-300 leading-relaxed italic">
                                         {parseInterlinksReact(selectedItem.analogy, selectedItem.id, handleTermSelect, glossaryData)}
                                     </p>
                                 </div>
@@ -225,7 +225,7 @@ export function Glossary() {
                                     <h3 className="font-semibold text-md text-gray-800 dark:text-gray-200 mb-1">
                                         Why it Matters
                                     </h3>
-                                    <p className="text-gray-600 text-sm dark:text-gray-300 leading-relaxed">
+                                    <p className="text-gray-600 text-md dark:text-gray-300 leading-relaxed">
                                         {parseInterlinksReact(selectedItem.significance, selectedItem.id, handleTermSelect, glossaryData)}
                                     </p>
                                 </div>

@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/Layout/ThemeProvider"
 import { ModeToggle } from "@/components/Layout/ModeToggle"
 // import { LogoToggle } from "@/components/Layout/LogoToggle"
+import EmailCapture from "@/components/EmailCapture"
 
 import { MobileNav } from "@/components/Layout/MobileNav"
 import { useTheme } from "next-themes"
@@ -135,6 +136,8 @@ export default function App({ Component, pageProps }: AppProps) {
             <main className="flex-grow max-w-[1200px] mx-auto w-full"> {/* Added w-full for better layout control of main content */}
               <Component {...pageProps} />
             </main>
+                    <EmailCapture />
+
             <footer className="mt-3 py-8 pb-0">
               <div className="flex flex-col items-center justify-center gap-2">
                 <p className="text-xs text-slate-600 dark:text-slate-400">
