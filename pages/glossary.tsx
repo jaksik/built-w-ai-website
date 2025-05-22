@@ -1,5 +1,4 @@
 import { Glossary } from "@/components/Glossary"
-import EmailCapture from "@/components/EmailCapture"
 
 
 export default function GlossaryPage() {
@@ -10,7 +9,7 @@ export default function GlossaryPage() {
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl text-gray-900 dark:text-gray-100 font-inter">
             AI Glossary
           </h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
+          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
             Essential terms and concepts for understanding artificial intelligence.                </p>
           {/* Stylish Line Break */}
           <div className="max-w-lg mx-auto">
@@ -18,7 +17,6 @@ export default function GlossaryPage() {
           </div>
         </section>
         <Glossary />
-        <EmailCapture />
       </div>
     </div>
   )

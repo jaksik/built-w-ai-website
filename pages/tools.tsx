@@ -1,5 +1,4 @@
 import GetTools from "@/components/Tools"
-import EmailCapture from "@/components/EmailCapture"
 
 export default function ToolsPage() {
   return (
@@ -11,8 +10,8 @@ export default function ToolsPage() {
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl text-gray-900 dark:text-gray-100 font-inter">
             AI Tools
           </h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
-            Discover and compare the most powerful AI tools available today. Filter by category to find exactly what you need.
+          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+            Discover and compare the most powerful AI tools available. Filter by category to find exactly what you need.
           </p>
 
         {/* Stylish Line Break */}
@@ -23,8 +22,6 @@ export default function ToolsPage() {
 
         {/* Tools directory component */}
         <GetTools />
-        <EmailCapture />
-
       </div>
     </div>
   )

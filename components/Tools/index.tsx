@@ -101,7 +101,7 @@ export default function Tools() {
                                         : "hover:bg-gray-50 dark:hover:bg-gray-900/70"
                                     }`}
                             >
-                                <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100 font-inter">
+                                <h3 className="font-semibold text-md text-gray-900 dark:text-gray-100 font-inter">
                                     {category}
                                 </h3>
                             </button>

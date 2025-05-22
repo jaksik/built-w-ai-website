@@ -39,7 +39,7 @@ const ToolCard = ({ tool }: ToolCardProps) => (
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                     {tool.category}
                 </p>
-                <p className="hidden md:block text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="hidden md:block text-md text-gray-600 dark:text-gray-300 leading-relaxed">
                     {tool.description}
                 </p>
             </div>
