@@ -10,6 +10,8 @@ import { MobileNav } from "@/components/Layout/MobileNav"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
+import Script from 'next/script'; // Added for Google Analytics
+import * as gtag from '../lib/gtag'; // Added for Google Analytics
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,6 +22,18 @@ const navigationLinks = [
   // { href: "/labs", label: "Labs" },
 ]
 
+// Declare gtag on the window object for TypeScript (for Google Analytics)
+declare global {
+  interface Window {
+    gtag?: (
+      command: 'config' | 'event' | 'js',
+      trackingIdOrAction: string | Date,
+      config?: { page_path?: URL | string; event_category?: string; event_label?: string; value?: number } // Modified page_path to accept string
+    ) => void;
+    dataLayer?: unknown[];
+  }
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const { resolvedTheme, theme } = useTheme()
@@ -27,19 +41,60 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     setMounted(true)
-    console.log('Theme state:', {
-      resolvedTheme,
-      theme,
-      mounted
-    })
-  }, [resolvedTheme, theme, mounted])
+    // console.log('Theme state:', { // Optional: keep for debugging if needed
+    //   resolvedTheme,
+    //   theme,
+    //   mounted
+    // })
+  }, [resolvedTheme, theme]) // Removed 'mounted' from dependencies as it causes re-renders and is set true once.
+
+  // Google Analytics pageview tracking
+  useEffect(() => {
+    const handleRouteChange = (url: string) => { // Changed type to string as Next.js router.events.on provides string
+      if (gtag.GA_TRACKING_ID) {
+        gtag.pageview(new URL(url, window.location.origin)); // Construct URL object
+      }
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
 
   if (!mounted) {
-    return null
+    // To prevent hydration mismatch, especially with theme,
+    // it's common to return null or a basic loader until mounted.
+    // However, for GA scripts, they can be outside this check if they don't depend on `mounted` state.
+    // For simplicity and to ensure theme is ready, we keep it here.
+    return null;
   }
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+      {/* Google Analytics Scripts */}
+      {gtag.GA_TRACKING_ID && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+          />
+          <Script
+            id="gtag-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gtag.GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
+        </>
+      )}
       <div className={inter.className}>
         <div className="antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50">
           <div className="max-w-5xl mx-auto py-10 pb-1 px-4 min-h-screen flex flex-col">
@@ -47,9 +102,6 @@ export default function App({ Component, pageProps }: AppProps) {
               <div className="flex items-center justify-between">
 
                 <Link href="/" className="flex items-baseline logo-font">
-                  {/* <span className="text-3xl font-bold">Built</span>
-                  <span className="text-xl font-semibold mx-1">with</span>
-                  <span className="text-3xl font-bold">AI</span> */}
                   <span className="text-2xl font-bold">Built with AI</span>
                 </Link>
 
@@ -80,7 +132,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 </div>
               </div>
             </header>
-            <main className="flex-grow max-w-[1200px] mx-auto">
+            <main className="flex-grow max-w-[1200px] mx-auto w-full"> {/* Added w-full for better layout control of main content */}
               <Component {...pageProps} />
             </main>
             <footer className="mt-3 py-8 pb-0">
