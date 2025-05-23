@@ -1,4 +1,5 @@
 import { Glossary } from "@/components/Glossary"
+import EmailCapture from "@/components/EmailCapture"
 
 
 export default function GlossaryPage() {
@@ -18,6 +19,8 @@ export default function GlossaryPage() {
         </section>
         <Glossary />
       </div>
+              <EmailCapture />
+
     </div>
   )
 }

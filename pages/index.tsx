@@ -3,14 +3,22 @@ import { ArrowRight } from 'lucide-react'; // Or any other icon library you pref
 
 export default function LandingPage() {
   return (
-    <div className="space-y-12 py-8 md:py-16 lg:py-24">
+    <div className="space-y-12 py-3 md:py-16 lg:py-24">
       {/* Hero Section */}
       <section className="text-center space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 animate-gradient-text">
             Built with AI
           </span>
         </h1>
+                {/* <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 animate-gradient-text">
+            Built with{' '}
+            <span className="inline-block border-2 rounded-md px-1 animate-gradient-border">
+              AI
+            </span>
+          </span>
+        </h1> */}
         <p className="mx-auto max-w-xl text-lg text-slate-600 dark:text-slate-400 md:text-xl">
           Your central hub for discovering AI tools, staying updated with the latest AI news, and understanding key AI concepts.
         </p>

@@ -5,7 +5,6 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/Layout/ThemeProvider"
 import { ModeToggle } from "@/components/Layout/ModeToggle"
 // import { LogoToggle } from "@/components/Layout/LogoToggle"
-import EmailCapture from "@/components/EmailCapture"
 
 import { MobileNav } from "@/components/Layout/MobileNav"
 import { useTheme } from "next-themes"
@@ -103,7 +102,8 @@ export default function App({ Component, pageProps }: AppProps) {
               <div className="flex items-center justify-between">
 
                 <Link href="/" className="flex items-baseline logo-font">
-                  <span className="text-2xl font-bold">Built with AI</span>
+                  <span className="text-2xl font-medium pr-2">Built with </span>
+                  <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span>
                 </Link>
 
                 <nav className="text-md font-medium space-x-8 hidden md:flex items-center">
@@ -136,7 +136,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <main className="flex-grow max-w-[1200px] mx-auto w-full"> {/* Added w-full for better layout control of main content */}
               <Component {...pageProps} />
             </main>
-                    <EmailCapture />
 
             <footer className="mt-3 py-8 pb-0">
               <div className="flex flex-col items-center justify-center gap-2">
