@@ -19,7 +19,7 @@ const navigationLinks = [
   { href: "/tools", label: "Tools" },
   { href: "/news", label: "News" },
   { href: "/glossary", label: "Glossary" },
-  // { href: "/labs", label: "Labs" },
+  { href: "/events", label: "Events" },
 ]
 
 // Declare gtag on the window object for TypeScript (for Google Analytics)
