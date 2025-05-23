@@ -68,3 +68,22 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@keyframes gradient-border {
+  0% {
+    border-image-source: linear-gradient(to right, rgb(56, 189, 248), rgb(99, 102, 241), rgb(139, 92, 246));
+  }
+  50% {
+    border-image-source: linear-gradient(to right, rgb(139, 92, 246), rgb(56, 189, 248), rgb(99, 102, 241));
+  }
+  100% {
+    border-image-source: linear-gradient(to right, rgb(99, 102, 241), rgb(139, 92, 246), rgb(56, 189, 248));
+  }
+}
+
+.animate-gradient-border {
+  border-image-slice: 1;
+  border-image-width: 4px;
+  border-image-outset: 0;
+  animation: gradient-border 8s ease infinite;
+}

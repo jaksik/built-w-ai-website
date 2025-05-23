@@ -1,4 +1,5 @@
 import GetArticles from "@/components/Articles"
+import EmailCapture from "@/components/EmailCapture"
 
 export default function NewsPage() {
   return (
@@ -18,7 +19,10 @@ export default function NewsPage() {
           </div>
         </section>
         <GetArticles />
+
       </div>
+              <EmailCapture />
+
     </div>
   )
 }
