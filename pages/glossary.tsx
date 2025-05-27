@@ -19,7 +19,7 @@ export default function GlossaryPage() {
         </section>
         <Glossary />
       </div>
-              <EmailCapture />
+      <EmailCapture />
 
     </div>
   )

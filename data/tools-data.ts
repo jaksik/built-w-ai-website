@@ -111,7 +111,7 @@ export const tools: Tool[] = [
   {
     id: "15",
     name: "ChatNode",
-    category: "Custom Chatbots",
+    category: "AI Chatbot Builders",
     subcategory: "Custom Solutions",
     url: "https://www.chatnode.ai/?via=sharpstartup",
     logoUrl: "/logos/chatnode.png",
@@ -120,7 +120,7 @@ export const tools: Tool[] = [
   {
     id: "16",
     name: "ChatBase",
-    category: "Custom Chatbots",
+    category: "AI Chatbot Builders",
     subcategory: "Custom Solutions",
     url: "https://www.chatbase.co/?via=Sharpstartup",
     logoUrl: "/logos/chatbase.png",
@@ -129,7 +129,7 @@ export const tools: Tool[] = [
   {
     id: "17",
     name: "HubSpot",
-    category: "Custom Chatbots",
+    category: "AI Chatbot Builders",
     subcategory: "Custom Solutions",
     url: "https://www.hubspot.com/products/crm/chatbot-builder",
     logoUrl: "/logos/hubspot.png",
@@ -138,7 +138,7 @@ export const tools: Tool[] = [
   {
     id: "19",
     name: "ChatbotBuilder",
-    category: "Custom Chatbots",
+    category: "AI Chatbot Builders",
     subcategory: "Custom Solutions",
     url: "https://www.chatbotbuilder.ai/",
     logoUrl: "/logos/chatbotbuilder-ai.png",
@@ -147,7 +147,7 @@ export const tools: Tool[] = [
   {
     id: "20",
     name: "Intercom",
-    category: "Custom Chatbots",
+    category: "AI Chatbot Builders",
     subcategory: "Custom Solutions",
     url: "https://www.intercom.com/",
     logoUrl: "/logos/intercom.png",
@@ -156,7 +156,7 @@ export const tools: Tool[] = [
   {
     id: "21",
     name: "Botpress",
-    category: "Custom Chatbots",
+    category: "AI Chatbot Builders",
     subcategory: "Custom Solutions",
     url: "https://botpress.com/",
     logoUrl: "/logos/botpress.png",
@@ -165,7 +165,7 @@ export const tools: Tool[] = [
   {
     id: "23",
     name: "Google Cloud",
-    category: "Cloud Platforms",
+    category: "AI Cloud Services",
     subcategory: "Development",
     url: "https://cloud.google.com/products/ai",
     logoUrl: "/logos/googlecloud.png",
@@ -174,7 +174,7 @@ export const tools: Tool[] = [
    {
     id: "24",
     name: "Azure AI",
-    category: "Cloud Platforms",
+    category: "AI Cloud Services",
     subcategory: "Development",
     url: "https://azure.microsoft.com/en-us/solutions/ai",
     logoUrl: "/logos/azure.png",
@@ -183,7 +183,7 @@ export const tools: Tool[] = [
    {
     id: "25",
     name: "Groq",
-    category: "Cloud Platforms",
+    category: "AI Cloud Services",
     subcategory: "Development",
     url: "https://groq.com/",
     logoUrl: "https://cdn.brandfetch.io/idxygbEPCQ/w/201/h/201/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1668515712972",
@@ -192,7 +192,7 @@ export const tools: Tool[] = [
    {
     id: "26",
     name: "AWS",
-    category: "Cloud Platforms",
+    category: "AI Cloud Services",
     subcategory: "Development",
     url: "https://aws.amazon.com/ai/",
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
@@ -201,7 +201,7 @@ export const tools: Tool[] = [
   {
     id: "27",
     name: "Airtable",
-    category: "Cloud Platforms",
+    category: "AI Cloud Services",
     subcategory: "Storage",
     url: "https://www.airtable.com/",
     logoUrl: "/logos/airtable.png",
