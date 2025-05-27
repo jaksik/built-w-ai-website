@@ -1,5 +1,5 @@
 {
-  "name": "new-built-website",
+  "name": "built-with-ai-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@types/react-datepicker": "^6.2.0",
     "lucide-react": "^0.511.0",
     "mongoose": "^8.14.3",

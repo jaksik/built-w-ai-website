@@ -4,7 +4,6 @@ import type { AppProps } from "next/app"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/Layout/ThemeProvider"
 import { ModeToggle } from "@/components/Layout/ModeToggle"
-// import { LogoToggle } from "@/components/Layout/LogoToggle"
 
 import { MobileNav } from "@/components/Layout/MobileNav"
 import { useTheme } from "next-themes"
@@ -18,8 +17,7 @@ const inter = Inter({ subsets: ["latin"] })
 const navigationLinks = [
   { href: "/tools", label: "Tools" },
   { href: "/news", label: "News" },
-  { href: "/glossary", label: "Glossary" },
-  { href: "/events", label: "Events" },
+  { href: "/glossary", label: "Glossary" }
 ]
 
 // Declare gtag on the window object for TypeScript (for Google Analytics)
@@ -102,8 +100,11 @@ export default function App({ Component, pageProps }: AppProps) {
               <div className="flex items-center justify-between">
 
                 <Link href="/" className="flex items-baseline logo-font">
-                  <span className="text-2xl font-medium pr-2">Built with </span>
-                  <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span>
+                  {/* <span className="text-2xl font-medium pr-2">Built with </span>
+                  <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span> */}
+                  <span className="text-3xl font-bold pr-1">built </span>
+                  <span className="text-lg font-medium pr-1"> with </span>
+                  <span className="text-3xl font-bold border-4 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span>
                 </Link>
 
                 <nav className="text-md font-medium space-x-8 hidden md:flex items-center">
@@ -140,7 +141,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <footer className="mt-3 py-8 pb-0">
               <div className="flex flex-col items-center justify-center gap-2">
                 <p className="text-xs text-slate-600 dark:text-slate-400">
-                  © {new Date().getFullYear()} Built with AI | Austin, TX 🇺🇸
+                  © {new Date().getFullYear()} Built With AI | Austin, TX 🇺🇸
                 </p>
                 <div className="flex gap-4 text-xs text-slate-600 dark:text-slate-400">
                   <Link href="/privacy-policy">Privacy Policy</Link>
