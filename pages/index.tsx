@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react'; // Or any other icon library you prefer
+import BeehiivForm from '@/components/BeehiivForm';
 
 export default function LandingPage() {
   return (
-    <div className="space-y-12 py-3 md:py-16 lg:py-24">
+    <div className="space-y-12 py-3 md:py-16 lg:py-20">
       {/* Hero Section */}
       <section className="text-center space-y-6">
-        <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        {/* <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 animate-gradient-text">
             Built with AI
           </span>
-        </h1>
-                {/* <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        </h1> */}
+        {/* <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 animate-gradient-text">
             Built with{' '}
             <span className="inline-block border-2 rounded-md px-1 animate-gradient-border">
@@ -19,22 +20,20 @@ export default function LandingPage() {
             </span>
           </span>
         </h1> */}
-        <p className="mx-auto max-w-xl text-lg text-slate-600 dark:text-slate-400 md:text-xl">
+
+        <h1>
+          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold pr-1">Built </span>
+          <span className="text-lg sm:text-5xl md:text-6xl lg:text-7xl font-medium pr-1"> with </span>
+          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold border-4 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span>
+        </h1>
+          {/* <span className="text-2xl font-medium pr-2">Built with </span>
+                  <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span> */}
+
+        {/* <p className="mx-auto max-w-xl text-lg text-slate-600 dark:text-slate-400 md:text-xl">
           Your central hub for discovering AI tools, staying updated with the latest AI news, and understanding key AI concepts.
-        </p>
-        <div className="flex justify-center gap-4">
-           {/* Replaced links with Beehiiv embed */}
-          <div className="w-full max-w-md"> {/* Added a wrapper for better sizing control */}
-            <iframe
-              src="https://embeds.beehiiv.com/0e9d62ca-f1b2-498f-b71a-4479175078e3?slim=true"
-              data-test-id="beehiiv-embed"
-              height="64"
-              frameBorder="0"
-              scrolling="no"
-              style={{ margin: '0 auto', borderRadius: '0px', backgroundColor: 'transparent', width: '100%' }}
-            ></iframe>
-          </div>
-        </div>
+        </p> */}
+        <BeehiivForm />
+
       </section>
 
       {/* Features/Sections Overview */}
