@@ -21,7 +21,7 @@ export default function NewsPage() {
         <GetArticles />
 
       </div>
-              <EmailCapture />
+      <EmailCapture />
 
     </div>
   )

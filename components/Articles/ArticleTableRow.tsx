@@ -14,7 +14,7 @@ const truncateText = (text: string, maxLength: number = 100) => {
 export const ArticleTableRow = ({ article }: ArticleTableRowProps) => (
     <tr key={article._id.toString()} className="transition-colors">
         <td className="w-2/12 px-6 py-4 whitespace-nowrap text-sm md:text-[0.725rem] text-gray-500 dark:text-gray-400">
-            {formatDate(article.publishedAt)}
+            {formatDate(article.publishedDate)}
         </td>
 
         <td className="w-7/12 py-2 md:pl-2 whitespace-normal">
@@ -23,19 +23,20 @@ export const ArticleTableRow = ({ article }: ArticleTableRowProps) => (
                     href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-md font-medium text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors font-inter"
+                    className="text-md py-2 font-semibold text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400 transition-colors font-inter"
                 >
                     {truncateText(article.title)}
                 </a>
-                <span className="text-xs pt-1 md:text-[0.625rem] text-gray-700 dark:text-gray-300">
-                    {article.source}
-                </span>
+                {/* <span className="text-xs pt-1 md:text-[0.625rem] text-gray-700 dark:text-gray-300">
+                    {article.sourceName}
+                </span> */}
             </div>
         </td>
 
         <td className="w-1/12 px-6 py-4 whitespace-nowrap">
-            <span className={`px-3 py-1 text-xs leading-5 font-medium rounded-lg ${getCategoryColorClasses(article.category)}`}>
-                {article.category}
+            <span className={`px-3 py-1 text-xs leading-5 font-medium rounded-lg`}> 
+                {/* ${getCategoryColorClasses(article.category)} */}
+                {article.sourceName}
             </span>
         </td>
     </tr>

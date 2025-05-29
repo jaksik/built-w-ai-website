@@ -9,11 +9,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     case 'GET':
       try {
         const { category, active } = req.query;
-        const query: Record<string, unknown> = {};
+        const query: Record<string, unknown> = {
+          isHidden: { $ne: true } // Get articles that are not hidden or don't have isHidden field
+        };
         
         console.log('Fetching Article with query:', query);
 
-        const articles = await Article.find(query).sort({ publishedAt: -1 });
+        const articles = await Article.find(query).sort({ publishedDate: -1 });
 
         console.log('Found Article articles:', articles.length);
         console.log('Response from Article API');
