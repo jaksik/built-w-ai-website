@@ -22,7 +22,16 @@ const GetArticles: React.FC = () => {
 
         // Wait for both the data and the minimum time
         await Promise.all([minLoadingTime]);
-        setArticles(data);
+        
+        // Sort articles by publishedDate in descending order (newest first)
+        const sortedArticles = data.sort((a: IArticle, b: IArticle) => {
+          if (!a.publishedDate && !b.publishedDate) return 0;
+          if (!a.publishedDate) return 1; // Put articles without dates at the end
+          if (!b.publishedDate) return -1; // Put articles without dates at the end
+          return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
+        });
+        
+        setArticles(sortedArticles);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
       } finally {

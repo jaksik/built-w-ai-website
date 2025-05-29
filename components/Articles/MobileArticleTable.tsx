@@ -29,7 +29,7 @@ export const MobileArticleTable = ({ articles, isLoading = false }: ArticleTable
                             <td className="px-6 py-4 whitespace-normal">
                                 <div className="flex flex-col">
                                     <span className="text-xs pb-2 text-gray-700 dark:text-gray-300">
-                                        {formatDate(article.publishedAt)}
+                                        {formatDate(article.publishedDate)}
                                     </span>
                                     <a
                                         href={article.link}
@@ -40,7 +40,7 @@ export const MobileArticleTable = ({ articles, isLoading = false }: ArticleTable
                                         {truncateText(article.title)}
                                     </a>
                                     <span className="text-xs pt-3 text-gray-700 dark:text-gray-300">
-                                        {article.source}
+                                        {article.sourceName}
                                     </span>
                                 </div>
                             </td>
