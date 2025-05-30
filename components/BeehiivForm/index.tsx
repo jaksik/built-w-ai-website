@@ -146,7 +146,7 @@ export const BeehiivForm: React.FC<BeehiivFormProps> = ({
                     <form onSubmit={handleSubmit} className="group w-full">
                         <div className="flex flex-col">
                             <div className="flex w-full flex-col items-center sm:flex-row overflow-hidden p-1 rounded-lg bg-gray-50 dark:bg-gray-700" style={{ border: '2px solid rgb(0, 0, 0)' }}>
-                                <div className="flex w-full items-center bg-gray-50 dark:bg-gray-700">
+                                <div className="flex w-full items-center bg-gray-50 dark:bg-gray-700 pt-3 pb-4">
                                     <div className="px-3 text-black dark:text-gray-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path>
