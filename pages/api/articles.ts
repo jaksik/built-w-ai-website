@@ -8,21 +8,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   switch (req.method) {
     case 'GET':
       try {
-        const { category, active } = req.query;
+        const { category, active, page = '1', limit = '25' } = req.query;
+        
+        const pageNumber = parseInt(page as string, 10);
+        const limitNumber = parseInt(limit as string, 10);
+        const skip = (pageNumber - 1) * limitNumber;
+        
         const query: Record<string, unknown> = {
           isHidden: { $ne: true } // Get articles that are not hidden or don't have isHidden field
         };
         
-        console.log('Fetching Article with query:', query);
+        console.log('Fetching Articles with query:', query, 'Page:', pageNumber, 'Limit:', limitNumber);
 
-        const articles = await Article.find(query).sort({ publishedDate: -1 });
+        // Get articles with pagination
+        const articles = await Article.find(query)
+          .sort({ publishedDate: -1 })
+          .skip(skip)
+          .limit(limitNumber);
 
-        console.log('Found Article articles:', articles.length);
-        console.log('Response from Article API');
+        // Get total count for pagination info
+        const totalCount = await Article.countDocuments(query);
+        const totalPages = Math.ceil(totalCount / limitNumber);
+        const hasNextPage = pageNumber < totalPages;
+        const hasPrevPage = pageNumber > 1;
+
+        console.log('Found Articles:', articles.length, 'Total:', totalCount, 'Pages:', totalPages);
         
         res.status(200).json({ 
           source: 'article-api',
-          data: articles 
+          data: articles,
+          pagination: {
+            currentPage: pageNumber,
+            totalPages,
+            totalCount,
+            hasNextPage,
+            hasPrevPage,
+            limit: limitNumber
+          }
         });
 
       } catch (error) {
