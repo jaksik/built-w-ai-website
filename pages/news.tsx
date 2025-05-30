@@ -1,5 +1,5 @@
 import GetArticles from "@/components/Articles"
-import EmailCapture from "@/components/EmailCapture"
+import { BeehiivBannerForm } from '../components/BeehiivForm/exports';
 
 export default function NewsPage() {
   return (
@@ -21,8 +21,10 @@ export default function NewsPage() {
         <GetArticles />
 
       </div>
-      <EmailCapture />
-
+      <BeehiivBannerForm
+        title="Stay Ahead of the Curve"
+        description="Get the latest AI news, tools, and insights delivered right to your inbox."
+      />
     </div>
   )
 }

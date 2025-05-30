@@ -1,5 +1,5 @@
 import GetTools from "@/components/Tools"
-import EmailCapture from "@/components/EmailCapture"
+import { BeehiivBannerForm } from '../components/BeehiivForm/exports';
 
 export default function ToolsPage() {
   return (
@@ -18,12 +18,14 @@ export default function ToolsPage() {
           {/* Stylish Line Break */}
           <div className="max-w-lg mx-auto">
             <div className="h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent" />
-          </div>         
+          </div>
         </section>
-        
+
         <GetTools />
       </div>
-      <EmailCapture />
-    </div>
+      <BeehiivBannerForm
+        title="Stay Ahead of the Curve"
+        description="Get the latest AI news, tools, and insights delivered right to your inbox."
+      />    </div>
   )
 }

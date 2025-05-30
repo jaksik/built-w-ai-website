@@ -1,3 +1,5 @@
+import BeehiivForm from '@/components/BeehiivForm';
+
 interface EmailCatptureProps {
     height?: number;
     maxWidth?: number;
@@ -13,24 +15,7 @@ export default function EmailCatpture({ height = 60, maxWidth = 430 }: EmailCatp
                         Join our weekly digest of breakthrough AI capabilities and emerging possibilities.
                     </p>
                 </div>
-                <div className="w-full md:w-1/2">
-                    <div className="flex justify-center">
-                        <iframe
-                            src="https://embeds.beehiiv.com/0e9d62ca-f1b2-498f-b71a-4479175078e3?slim=true"
-                            data-test-id="beehiiv-embed"
-                            height={height}
-                            frameBorder="0"
-                            scrolling="no"
-                            style={{
-                                margin: 0,
-                                borderRadius: '0px !important',
-                                backgroundColor: 'transparent',
-                                width: '100%',
-                                maxWidth: `${maxWidth}px`
-                            }}
-                        />
-                    </div>
-                </div>
+             <BeehiivForm/>
             </div>
         </div>
 

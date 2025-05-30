@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useBeehiivSubscription } from '../../hooks/useBeehiivSubscription';
 
 interface BeehiivFormProps {
     publicationId?: string;
@@ -7,101 +8,34 @@ interface BeehiivFormProps {
     description?: string;
     buttonText?: string;
     placeholder?: string;
+    enableDebugLogging?: boolean;
 }
 
 export const BeehiivForm: React.FC<BeehiivFormProps> = ({
-    publicationId = process.env.NEXT_PUBLIC_BEEHIIV_PUBLICATION_ID,
+    publicationId,
     className = "",
     title = "Stay Updated",
     description = "Get the latest AI tools and insights delivered right to your inbox.",
     buttonText = "Subscribe",
-    placeholder = "Enter your email address"
+    placeholder = "Enter your email address",
+    enableDebugLogging = true
 }) => {
-    const [email, setEmail] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [error, setError] = useState('');
-
-    // Debug logging on component mount
-    useEffect(() => {
-        console.log('🔧 BeehiivForm component mounted');
-        console.log('🔧 Environment variables check:');
-        console.log('  - NEXT_PUBLIC_BEEHIIV_PUBLICATION_ID:', process.env.NEXT_PUBLIC_BEEHIIV_PUBLICATION_ID);
-        console.log('🔧 Resolved publication ID:', publicationId);
-        console.log('🔧 Props:', { className, title, description, buttonText, placeholder });
-    }, [publicationId, className, title, description, buttonText, placeholder]);
-
-    const validateEmail = (email: string): boolean => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    };
+    const {
+        email,
+        setEmail,
+        isLoading,
+        isSuccess,
+        error,
+        subscribe,
+        resetSuccess
+    } = useBeehiivSubscription({ 
+        publicationId, 
+        enableDebugLogging 
+    });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('🚀 Form submission started');
-        console.log('📧 Email:', email);
-        console.log('🔑 Publication ID:', publicationId);
-
-        if (!email) {
-            console.log('❌ No email provided');
-            setError('Email address is required');
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            console.log('❌ Invalid email format');
-            setError('Please enter a valid email address');
-            return;
-        }
-
-        if (!publicationId) {
-            console.log('❌ No publication ID found');
-            setError('Configuration error: Missing publication ID');
-            return;
-        }
-
-        console.log('✅ Validation passed, calling API');
-        setIsLoading(true);
-        setError('');
-
-        try {
-            console.log('🌐 Making API call to /api/subscribe');
-
-            const response = await fetch('/api/subscribe', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    email: email,
-                }),
-            });
-
-            console.log('📡 API Response status:', response.status);
-
-            const data = await response.json();
-            console.log('📡 API Response data:', data);
-
-            if (response.ok && data.success) {
-                console.log('✅ Subscription successful!');
-                setIsSuccess(true);
-                setEmail('');
-            } else {
-                console.error('❌ Subscription failed:', data);
-                setError(data.error || 'Subscription failed. Please try again.');
-            }
-
-        } catch (err) {
-            console.error('💥 Subscription error:', err);
-            console.error('💥 Error details:', {
-                message: err instanceof Error ? err.message : 'Unknown error',
-                stack: err instanceof Error ? err.stack : undefined
-            });
-            setError(`Failed to subscribe: ${err instanceof Error ? err.message : 'Please try again later'}`);
-        } finally {
-            setIsLoading(false);
-            console.log('🏁 Form submission completed');
-        }
+        await subscribe(email);
     };
 
     if (isSuccess) {
@@ -119,7 +53,7 @@ export const BeehiivForm: React.FC<BeehiivFormProps> = ({
                     Check your email for a confirmation message.
                 </p>
                 <button
-                    onClick={() => setIsSuccess(false)}
+                    onClick={() => resetSuccess()}
                     className="mt-4 px-4 py-2 bg-black dark:bg-gray-900 text-white hover:bg-gray-800 dark:hover:bg-gray-700 rounded-md font-semibold transition-colors"
                     style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
                 >
