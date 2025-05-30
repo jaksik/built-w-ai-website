@@ -8,9 +8,9 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="text-center space-y-6">
         <div className="flex items-baseline justify-center logo-font">
-          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-bold pr-1">Built </span>
-          <span className="text-lg sm:text-5xl md:text-6xl lg:text-4xl font-medium px-2"> with </span>
-          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-bold border-4 rounded-sm  px-1 border-gray-700 dark:border-slate-300"> AI</span>
+          <span className="text-5xl sm:text-5xl md:text-7xl lg:text-7xl font-bold pr-1">Built </span>
+          <span className="text-2xl sm:text-2xl md:text-4xl lg:text-4xl font-medium px-2"> with </span>
+          <span className="text-5xl sm:text-5xl md:text-7xl lg:text-7xl font-bold border-4 rounded-sm  px-1 border-gray-700 dark:border-slate-300"> AI</span>
         </div>
         {/* <p className="mx-auto max-w-xl text-lg text-slate-600 dark:text-slate-400 md:text-xl">
           Your central hub for discovering AI tools, staying updated with the latest AI news, and understanding key AI concepts.
