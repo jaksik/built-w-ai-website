@@ -7,33 +7,15 @@ export default function LandingPage() {
     <div className="space-y-12 py-3 md:py-16 lg:py-20">
       {/* Hero Section */}
       <section className="text-center space-y-6">
-        {/* <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 animate-gradient-text">
-            Built with AI
-          </span>
-        </h1> */}
-        {/* <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 animate-gradient-text">
-            Built with{' '}
-            <span className="inline-block border-2 rounded-md px-1 animate-gradient-border">
-              AI
-            </span>
-          </span>
-        </h1> */}
-
-        <h1>
-          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold pr-1">Built </span>
-          <span className="text-lg sm:text-5xl md:text-6xl lg:text-7xl font-medium pr-1"> with </span>
-          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold border-4 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span>
-        </h1>
-          {/* <span className="text-2xl font-medium pr-2">Built with </span>
-                  <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span> */}
-
+        <div className="flex items-baseline justify-center logo-font">
+          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-bold pr-1">Built </span>
+          <span className="text-lg sm:text-5xl md:text-6xl lg:text-4xl font-medium px-2"> with </span>
+          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-bold border-4 rounded-sm  px-1 border-gray-700 dark:border-slate-300"> AI</span>
+        </div>
         {/* <p className="mx-auto max-w-xl text-lg text-slate-600 dark:text-slate-400 md:text-xl">
           Your central hub for discovering AI tools, staying updated with the latest AI news, and understanding key AI concepts.
         </p> */}
         <BeehiivForm />
-
       </section>
 
       {/* Features/Sections Overview */}
