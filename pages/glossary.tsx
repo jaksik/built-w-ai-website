@@ -1,11 +1,10 @@
 import { Glossary } from "@/components/Glossary"
-import EmailCapture from "@/components/EmailCapture"
-
+import { BeehiivBannerForm } from '../components/BeehiivForm/exports';
 
 export default function GlossaryPage() {
   return (
     <div className="space-y-8 pb-8 min-h-screen">
-      <div className="container mx-auto px-2 py-8">
+      <div className="container mx-auto px-2 py-8 pb-10">
         <section className="text-center space-y-4 mb-12">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl text-gray-900 dark:text-gray-100 font-inter">
             AI Glossary
@@ -19,8 +18,10 @@ export default function GlossaryPage() {
         </section>
         <Glossary />
       </div>
-      <EmailCapture />
-
+      <BeehiivBannerForm
+        title="Stay Ahead of the Curve"
+        description="Get the latest AI news, tools, and insights delivered right to your inbox."
+      />
     </div>
   )
 }
