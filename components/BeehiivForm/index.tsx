@@ -194,9 +194,9 @@ export const BeehiivForm: React.FC<BeehiivFormProps> = ({
                 </div>
             )}
 
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">
+            {/* <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">
                 By subscribing, you agree to receive our newsletter. You can unsubscribe at any time.
-            </p>
+            </p> */}
         </div>
     );
 };

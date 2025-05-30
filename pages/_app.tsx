@@ -102,8 +102,8 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Link href="/" className="flex items-baseline logo-font">
                   {/* <span className="text-2xl font-medium pr-2">Built with </span>
                   <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span> */}
-                  <span className="text-2xl font-bold pr-1">Built </span>
-                  <span className="text-lg font-medium pr-1"> with </span>
+                  <span className="hidden md:flex text-2xl font-bold pr-1">Built </span>
+                  <span className="hidden md:flex text-lg font-medium pr-1"> with </span>
                   <span className="text-2xl font-bold border-2 rounded-sm  px-1 border-gray-700 dark:border-slate-300"> AI</span>
                 </Link>
 
