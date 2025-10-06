@@ -108,7 +108,7 @@ export default function App({ Component, pageProps }: AppProps) {
                   <span className="text-4xl font-bold border-2 rounded-md px-1 border-gray-700 dark:border-slate-300"> AI</span>
                 </Link>
 
-                <nav className="text-xl font-medium space-x-7 hidden md:flex items-center">
+                <nav className="text-lg font-medium space-x-7 hidden md:flex items-center">
                   {navigationLinks.map((link) => (
                     <Link
                       key={link.href}
