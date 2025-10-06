@@ -1,0 +1,32 @@
+{
+  "tutorials": [
+    {
+      "id": "1",
+      "title": "Launch Your Own AI-generated Podcast (step by step)",
+      "videoId": "54JKArp5nq8",
+      "description": "Learn the basics of AI tools and how to use them effectively",
+      "tags": ["audio", "ChatGPT", "podcast", "ElevenLabs"]
+    },
+    {
+      "id": "2",
+      "title": "Kaiber AI: Ultimate Guide (text to video)",
+      "videoId": "gejWItlPxHY",
+      "description": "Deep dive into advanced AI concepts and implementations",
+      "tags": ["video", "KaiberAI", "text-to-video"]
+    },
+    {
+      "id": "3",
+      "title": "Create Your Own AI Music Video (a complete guide)",
+      "videoId": "dJmsA1HJgWY",
+      "description": "Deep dive into advanced AI concepts and implementations",
+      "tags": ["video", "KaiberAI", "text-to-video"]
+    },
+    {
+      "id": "4",
+      "title": "Creating AI Vector Logos with Midjourney (step by step)",
+      "videoId": "9DrxF7In8bM",
+      "description": "Deep dive into advanced AI concepts and implementations",
+      "tags": ["image", "Midjourney", "text-to-image"]
+    }
+  ]
+}
