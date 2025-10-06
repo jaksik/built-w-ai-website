@@ -17,7 +17,8 @@ const inter = Inter({ subsets: ["latin"] })
 const navigationLinks = [
   { href: "/tools", label: "Tools" },
   { href: "/news", label: "News" },
-  { href: "/glossary", label: "Glossary" }
+  { href: "/glossary", label: "Glossary" },
+  { href: "/tutorials", label: "Tutorials" }
 ]
 
 // Declare gtag on the window object for TypeScript (for Google Analytics)
@@ -102,12 +103,12 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Link href="/" className="flex items-baseline logo-font">
                   {/* <span className="text-2xl font-medium pr-2">Built with </span>
                   <span className="text-2xl font-medium border-2 rounded-md  px-1 border-gray-700 dark:border-slate-300"> AI</span> */}
-                  <span className="hidden md:flex text-2xl font-bold pr-1">Built </span>
-                  <span className="hidden md:flex text-lg font-medium pr-1"> with </span>
-                  <span className="text-2xl font-bold border-2 rounded-sm  px-1 border-gray-700 dark:border-slate-300"> AI</span>
+                  <span className="hidden md:flex text-4xl font-bold pr-2">Built </span>
+                  <span className="hidden md:flex text-2xl font-medium pr-2"> with </span>
+                  <span className="text-4xl font-bold border-2 rounded-md px-1 border-gray-700 dark:border-slate-300"> AI</span>
                 </Link>
 
-                <nav className="text-md font-medium space-x-8 hidden md:flex items-center">
+                <nav className="text-xl font-medium space-x-7 hidden md:flex items-center">
                   {navigationLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -125,6 +126,18 @@ export default function App({ Component, pageProps }: AppProps) {
                       {link.label}
                     </Link>
                   ))}
+                  <Link
+                    href="https://www.skool.com/built-with-ai-3270"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`
+                        text-gray-600 dark:text-gray-300
+                        hover:text-gray-800 dark:hover:text-gray-100 
+                        transition-colors
+                      `}
+                  >
+                    Community
+                  </Link>
                   <div className="ml-8 pr-4">
                     <ModeToggle />
                   </div>
